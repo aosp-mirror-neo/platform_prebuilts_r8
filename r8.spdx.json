@@ -2,7 +2,7 @@
   "SPDXID" : "SPDXRef-DOCUMENT",
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
-    "created" : "2024-03-04T16:01:57Z",
+    "created" : "2024-03-12T07:58:47Z",
     "creators" : [ "Tool: spdx-gradle-plugin", "Organization: Google LLC" ]
   },
   "name" : "R8 Compiler Suite",
@@ -58,7 +58,7 @@
     "name" : "The W3C License",
     "seeAlsos" : [ "http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/java-binding.zip" ]
   } ],
-  "documentNamespace" : "https://spdx.google/8800ecfb-5c55-5e01-9bb1-642ae088f292",
+  "documentNamespace" : "https://spdx.google/e3267c0d-d129-5f0e-b142-5d0f50f03695",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "copyrightText" : "NOASSERTION",
@@ -69,9 +69,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@49d5922cff57dbd46f9a71cc77dbe0e9db2f86f4#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@28c82489d5373a2f2a15b1a49c9d2c7e3aeea3b5#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.4.17-dev"
+    "versionInfo" : "8.4.21-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
@@ -398,48 +398,48 @@
     "SPDXID" : "SPDXRef-gnrtd15",
     "checksums" : [ {
       "algorithm" : "SHA1",
-      "checksumValue" : "babbf7cbcd7083709bf27ee5e19dd558d2dea39b"
+      "checksumValue" : "123e86fd82d3a49afd0a41df1288a40c969f11b2"
     }, {
       "algorithm" : "SHA256",
-      "checksumValue" : "835a146fbb0f229c1b8968e88dca66e7ca567a98ad88d71219848e522ca894a7"
+      "checksumValue" : "d42f4bac60b81c4fdcef1c666aed4181d00401e5e696e496f44935fe32fea58f"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-metadata-jvm/0.7.0/kotlinx-metadata-jvm-0.7.0.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-metadata-jvm/0.9.0/kotlinx-metadata-jvm-0.9.0.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.jetbrains.kotlinx/kotlinx-metadata-jvm@0.7.0?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlinx/kotlinx-metadata-jvm@0.9.0?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.7.0",
+    "name" : "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.9.0",
     "supplier" : "Organization: JetBrains",
-    "versionInfo" : "0.7.0"
+    "versionInfo" : "0.9.0"
   }, {
     "SPDXID" : "SPDXRef-gnrtd16",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "28a35bcdff46d864f80f346a617e486284b208d17378c41900dfb1de95a90e6c"
+      "checksumValue" : "3b479313ab6caea4e5e25d3dee8ca80c302c89ba73e1af4dafaa100f6ef9296a"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "e58b4816ac517e9cc5df1db051120c63d4cde669"
+      "checksumValue" : "17ee3e873d439566c7d8354403b5f3d9744c4c9c"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.9.20/kotlin-stdlib-1.9.20.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.9.21/kotlin-stdlib-1.9.21.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@1.9.20?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@1.9.21?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "org.jetbrains.kotlin:kotlin-stdlib:1.9.20",
+    "name" : "org.jetbrains.kotlin:kotlin-stdlib:1.9.21",
     "supplier" : "Organization: JetBrains",
-    "versionInfo" : "1.9.20"
+    "versionInfo" : "1.9.21"
   }, {
     "SPDXID" : "SPDXRef-gnrtd17",
     "checksums" : [ {
@@ -496,9 +496,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@49d5922cff57dbd46f9a71cc77dbe0e9db2f86f4#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@28c82489d5373a2f2a15b1a49c9d2c7e3aeea3b5#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.4.17-dev"
+    "versionInfo" : "8.4.21-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd20",
     "copyrightText" : "NOASSERTION",
@@ -509,9 +509,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@49d5922cff57dbd46f9a71cc77dbe0e9db2f86f4#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@28c82489d5373a2f2a15b1a49c9d2c7e3aeea3b5#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.4.17-dev"
+    "versionInfo" : "8.4.21-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd21",
     "checksums" : [ {
