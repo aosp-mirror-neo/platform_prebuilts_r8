@@ -130,6 +130,7 @@ public class D8Wrapper {
   }
 
   private void applyWrapperArguments(D8Command.Builder builder) {
+    diagnosticsHandler.setWarnOnUnsupportedMainDexList(true);
     diagnosticsHandler.setPrintInfoDiagnostics(printInfoDiagnostics);
     for (Path path : noDexArchives) {
       builder.addProgramResourceProvider(
