@@ -15,6 +15,7 @@
  */
 package com.android.tools.r8wrappers;
 
+import com.android.tools.r8.ArchiveClassFileProvider;
 import com.android.tools.r8.ArchiveProgramResourceProvider;
 import com.android.tools.r8.CompilationFailedException;
 import com.android.tools.r8.D8;
@@ -25,6 +26,7 @@ import com.android.tools.r8.Version;
 import com.android.tools.r8.origin.Origin;
 import com.android.tools.r8wrappers.utils.WrapperDiagnosticsHandler;
 import com.android.tools.r8wrappers.utils.WrapperFlag;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -46,11 +48,18 @@ public class D8Wrapper {
 
   private static final String NO_DEX_FLAG = "--no-dex-input-jar";
   private static final String INFO_FLAG = "--info";
+  private static final String SHARD_COUNT_FLAG = "--shard-count";
+  private static final String SHARD_NUMBER_FLAG = "--shard-number";
+
   private static List<ParseFlagInfo> getAdditionalFlagsInfo() {
     return Arrays.asList(
         new WrapperFlag(NO_DEX_FLAG, "Input archive with potential all dex code ignored."),
+        new WrapperFlag(SHARD_COUNT_FLAG, "Number of shards in total."),
+        new WrapperFlag(SHARD_NUMBER_FLAG, "Current shard."),
         new WrapperFlag(INFO_FLAG, "Print the info-level log messages from the compiler."));
+
   }
+
 
   private static String getUsageMessage() {
     StringBuilder builder =
@@ -75,7 +84,7 @@ public class D8Wrapper {
     return builder;
   }
 
-  public static void main(String[] args) throws CompilationFailedException {
+  public static void main(String[] args) throws CompilationFailedException, IOException {
     D8Wrapper wrapper = new D8Wrapper();
     String[] remainingArgs = wrapper.parseWrapperArguments(args);
     D8Command.Builder builder = D8Command.parse(
@@ -96,12 +105,30 @@ public class D8Wrapper {
   private WrapperDiagnosticsHandler diagnosticsHandler = new WrapperDiagnosticsHandler();
   private boolean printInfoDiagnostics = false;
   private List<Path> noDexArchives = new ArrayList<>();
+  private Integer shard_count = null;
+  private Integer shard_number = null;
 
   private String[] parseWrapperArguments(String[] args) {
     List<String> remainingArgs = new ArrayList<>();
     for (int i = 0; i < args.length; i++) {
       String arg = args[i];
       switch (arg) {
+        case SHARD_COUNT_FLAG:
+        {
+          if (++i >= args.length) {
+            throw new RuntimeException("Missing argument to " + SHARD_COUNT_FLAG);
+          }
+          shard_count = Integer.parseInt(args[i]);
+          break;
+        }
+        case SHARD_NUMBER_FLAG:
+        {
+          if (++i >= args.length) {
+            throw new RuntimeException("Missing argument to " + SHARD_NUMBER_FLAG);
+          }
+          shard_number = Integer.parseInt(args[i]);
+          break;
+        }
         case INFO_FLAG:
           {
             printInfoDiagnostics = true;
@@ -126,17 +153,44 @@ public class D8Wrapper {
           }
       }
     }
+    if ((shard_count == null) != (shard_number == null)){
+      throw new RuntimeException("You must specify both shard_number and shard_count, or none");
+    }
+    // We always pass this, but ensure it, the setup of the providers below rely on this.
+    if (noDexArchives.isEmpty() && shard_count != null) {
+      throw new RuntimeException("no dex archives not used for sharding");
+    }
     return remainingArgs.toArray(new String[0]);
   }
 
-  private void applyWrapperArguments(D8Command.Builder builder) {
+  private boolean isProgramEntry(String entry) {
+    if (shard_count == null) {
+      return ArchiveProgramResourceProvider.includeClassFileEntries(entry);
+    }
+    return entry.hashCode() % shard_count == shard_number &&
+        ArchiveProgramResourceProvider.includeClassFileEntries(entry);
+  }
+
+  private boolean isClassPathEntry(String entry) {
+    if (shard_count == null) {
+      return false;
+    }
+    return entry.hashCode() % shard_count != shard_number &&
+        ArchiveProgramResourceProvider.includeClassFileEntries(entry);
+  }
+
+  private void applyWrapperArguments(D8Command.Builder builder) throws IOException {
     diagnosticsHandler.setWarnOnUnsupportedMainDexList(true);
     diagnosticsHandler.setPrintInfoDiagnostics(printInfoDiagnostics);
     for (Path path : noDexArchives) {
       builder.addProgramResourceProvider(
           ArchiveProgramResourceProvider.fromArchive(
               path,
-              ArchiveProgramResourceProvider::includeClassFileEntries));
+              this::isProgramEntry));
+      if (shard_count != null) {
+        builder.addClasspathResourceProvider(
+            new ArchiveClassFileProvider(path, this::isClassPathEntry));
+      }
     }
   }
 }
