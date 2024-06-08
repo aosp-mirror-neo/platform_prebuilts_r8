@@ -61,7 +61,10 @@ public class R8Wrapper {
         new WrapperFlag("--info", "Print the info-level log messages from the compiler."),
         new WrapperFlag("--resource-input", "Resource input for the resource shrinker."),
         new WrapperFlag("--resource-output", "Resource shrinker output."),
-        new WrapperFlag("--optimized-resource-shrinking", "Use R8 optimizing resource pipeline."));
+        new WrapperFlag("--optimized-resource-shrinking", "Use R8 optimizing resource pipeline."),
+        new WrapperFlag(
+            "--no-implicit-default-init",
+            "Disable compat-mode behavior of keeping default constructors in full mode."));
   }
 
   private static String getUsageMessage() {
@@ -99,6 +102,13 @@ public class R8Wrapper {
 
     R8Wrapper wrapper = new R8Wrapper();
     String[] remainingArgs = wrapper.parseWrapperArguments(args);
+    if (!wrapper.useCompatPg && !wrapper.noImplicitDefaultInit) {
+      // Retain incorrect behavior in full mode that will implicitly keep default constructors.
+      // See b/132318799.
+      System.setProperty(
+          "com.android.tools.r8.enableEmptyMemberRulesToDefaultInitRuleConversion",
+          "1");
+    }
     R8Command.Builder builder = R8Command.parse(
         remainingArgs, CLI_ORIGIN, wrapper.diagnosticsHandler);
     if (builder.isPrintHelp()) {
@@ -123,6 +133,7 @@ public class R8Wrapper {
   private final List<String> pgRules = new ArrayList<>();
   private boolean printInfoDiagnostics = false;
   private boolean optimizingResourceShrinking = false;
+  private boolean noImplicitDefaultInit = false;
 
   private String[] parseWrapperArguments(String[] args) {
     List<String> remainingArgs = new ArrayList<>();
@@ -155,6 +166,11 @@ public class R8Wrapper {
         case "--optimized-resource-shrinking":
           {
             optimizingResourceShrinking = true;
+            break;
+          }
+        case "--no-implicit-default-init":
+          {
+            noImplicitDefaultInit = true;
             break;
           }
         case "--deps-file":
