@@ -2,7 +2,7 @@
   "SPDXID" : "SPDXRef-DOCUMENT",
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
-    "created" : "2024-06-14T09:06:53Z",
+    "created" : "2024-06-20T18:24:38Z",
     "creators" : [ "Tool: spdx-gradle-plugin", "Organization: Google LLC" ]
   },
   "name" : "R8 Compiler Suite",
@@ -53,7 +53,7 @@
     "name" : "GNU LESSER GENERAL PUBLIC LICENSE 2.1",
     "seeAlsos" : [ "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html" ]
   } ],
-  "documentNamespace" : "https://spdx.google/502c19c4-75bd-55f4-a0c5-70582308b111",
+  "documentNamespace" : "https://spdx.google/6a14d714-acb9-5bd6-bbf2-b58ac35d8fcc",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "copyrightText" : "NOASSERTION",
@@ -64,9 +64,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@b66227ea8c3d479f94beb3b214ad182d27251a7a#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@8a19a218c47d2d629fcc12df3cbb52a7baadb06a#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.6.8-dev"
+    "versionInfo" : "8.6.10-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
@@ -393,48 +393,48 @@
     "SPDXID" : "SPDXRef-gnrtd15",
     "checksums" : [ {
       "algorithm" : "SHA1",
-      "checksumValue" : "f6158a6a298a459b5a8a4701881e2890a25414de"
+      "checksumValue" : "48228e400bdde2de1bb5af4e91373387b327b84c"
     }, {
       "algorithm" : "SHA256",
-      "checksumValue" : "941ec1f5f4a8cb8c5982b38d2ef438a03945ce1e37f2111876890b5ed90c2f64"
+      "checksumValue" : "ad8f1c7dbc5ac46f5cbd2d2e5de39c56c9db65dd7de716a84e01ce208758aee6"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-metadata-jvm/2.0.0-Beta5/kotlin-metadata-jvm-2.0.0-Beta5.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-metadata-jvm/2.0.0/kotlin-metadata-jvm-2.0.0.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-metadata-jvm@2.0.0-Beta5?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-metadata-jvm@2.0.0?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "org.jetbrains.kotlin:kotlin-metadata-jvm:2.0.0-Beta5",
+    "name" : "org.jetbrains.kotlin:kotlin-metadata-jvm:2.0.0",
     "supplier" : "Organization: JetBrains",
-    "versionInfo" : "2.0.0-Beta5"
+    "versionInfo" : "2.0.0"
   }, {
     "SPDXID" : "SPDXRef-gnrtd16",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "bc97646d4a7c7f0b49e809fe65aa5d6c654d59f337ad0ce2a6180f5717697d69"
+      "checksumValue" : "240938c4aab8e73e888703e3e7d3f87383ffe5bd536d6d5e3c100d4cd0379fcf"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "763714203113a7f4a5477122be0c6c588df0116e"
+      "checksumValue" : "b48df2c4aede9586cc931ead433bc02d6fd7879e"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.0.0-Beta5/kotlin-stdlib-2.0.0-Beta5.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.0.0/kotlin-stdlib-2.0.0.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.0.0-Beta5?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.0.0?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "org.jetbrains.kotlin:kotlin-stdlib:2.0.0-Beta5",
+    "name" : "org.jetbrains.kotlin:kotlin-stdlib:2.0.0",
     "supplier" : "Organization: JetBrains",
-    "versionInfo" : "2.0.0-Beta5"
+    "versionInfo" : "2.0.0"
   }, {
     "SPDXID" : "SPDXRef-gnrtd17",
     "checksums" : [ {
@@ -491,9 +491,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@b66227ea8c3d479f94beb3b214ad182d27251a7a#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@8a19a218c47d2d629fcc12df3cbb52a7baadb06a#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.6.8-dev"
+    "versionInfo" : "8.6.10-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd20",
     "copyrightText" : "NOASSERTION",
@@ -504,34 +504,11 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@b66227ea8c3d479f94beb3b214ad182d27251a7a#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@8a19a218c47d2d629fcc12df3cbb52a7baadb06a#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.6.8-dev"
+    "versionInfo" : "8.6.10-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd21",
-    "checksums" : [ {
-      "algorithm" : "SHA1",
-      "checksumValue" : "00962acc39c59270f5ac7308d58d567d82258aac"
-    }, {
-      "algorithm" : "SHA256",
-      "checksumValue" : "11bcf9d11dd46b15676f69fb19b40a242ab573aedeee0da67c10b771b5a51f98"
-    } ],
-    "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://maven.google.com/com/android/tools/build/aapt2-proto/8.5.0-alpha04-11315950/aapt2-proto-8.5.0-alpha04-11315950.jar",
-    "externalRefs" : [ {
-      "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/com.android.tools.build/aapt2-proto@8.5.0-alpha04-11315950?repository_url=maven.google.com",
-      "referenceType" : "purl"
-    } ],
-    "filesAnalyzed" : false,
-    "licenseConcluded" : "NOASSERTION",
-    "licenseDeclared" : "Apache-2.0",
-    "licenseInfoFromFiles" : [ ],
-    "name" : "com.android.tools.build:aapt2-proto:8.5.0-alpha04-11315950",
-    "supplier" : "Person: The Android Open Source Project",
-    "versionInfo" : "8.5.0-alpha04-11315950"
-  }, {
-    "SPDXID" : "SPDXRef-gnrtd22",
     "checksums" : [ {
       "algorithm" : "SHA256",
       "checksumValue" : "59d388ea6a2d2d76ae8efff7fd4d0c60c6f0f464c3d3ab9be8e5add092975708"
@@ -553,6 +530,29 @@
     "name" : "com.google.protobuf:protobuf-java:3.22.3",
     "supplier" : "Organization: Google",
     "versionInfo" : "3.22.3"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd22",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "11bcf9d11dd46b15676f69fb19b40a242ab573aedeee0da67c10b771b5a51f98"
+    }, {
+      "algorithm" : "SHA1",
+      "checksumValue" : "00962acc39c59270f5ac7308d58d567d82258aac"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "https://maven.google.com/com/android/tools/build/aapt2-proto/8.5.0-alpha04-11315950/aapt2-proto-8.5.0-alpha04-11315950.jar",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/com.android.tools.build/aapt2-proto@8.5.0-alpha04-11315950?repository_url=maven.google.com",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "Apache-2.0",
+    "licenseInfoFromFiles" : [ ],
+    "name" : "com.android.tools.build:aapt2-proto:8.5.0-alpha04-11315950",
+    "supplier" : "Person: The Android Open Source Project",
+    "versionInfo" : "8.5.0-alpha04-11315950"
   }, {
     "SPDXID" : "SPDXRef-gnrtd23",
     "checksums" : [ {
@@ -1513,19 +1513,19 @@
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd17"
   }, {
+    "spdxElementId" : "SPDXRef-gnrtd19",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd21"
+  }, {
     "spdxElementId" : "SPDXRef-gnrtd20",
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd34"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd20",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd21"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd20",
-    "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd23"
   }, {
-    "spdxElementId" : "SPDXRef-gnrtd21",
+    "spdxElementId" : "SPDXRef-gnrtd20",
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd22"
   }, {
