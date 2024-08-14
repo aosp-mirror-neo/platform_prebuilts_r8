@@ -2,7 +2,7 @@
   "SPDXID" : "SPDXRef-DOCUMENT",
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
-    "created" : "2024-08-06T12:41:16Z",
+    "created" : "2024-08-14T13:44:03Z",
     "creators" : [ "Tool: spdx-gradle-plugin", "Organization: Google LLC" ]
   },
   "name" : "R8 Compiler Suite",
@@ -53,7 +53,7 @@
     "name" : "GNU LESSER GENERAL PUBLIC LICENSE 2.1",
     "seeAlsos" : [ "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html" ]
   } ],
-  "documentNamespace" : "https://spdx.google/03839cb1-267e-55ca-bf0c-5caaf5d6b4c6",
+  "documentNamespace" : "https://spdx.google/920cb9bc-5965-542e-be5f-dd7078893e98",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "copyrightText" : "NOASSERTION",
@@ -64,9 +64,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@6ad8957e838f3a3ccf8c08a0e7a93e1420ad5b76#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@ed143a7af4a662aa5016e4a8c7d75d619ea2efd8#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.7.4-dev"
+    "versionInfo" : "8.7.6-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
@@ -514,9 +514,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@6ad8957e838f3a3ccf8c08a0e7a93e1420ad5b76#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@ed143a7af4a662aa5016e4a8c7d75d619ea2efd8#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.7.4-dev"
+    "versionInfo" : "8.7.6-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd21",
     "copyrightText" : "NOASSERTION",
@@ -527,9 +527,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@6ad8957e838f3a3ccf8c08a0e7a93e1420ad5b76#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@ed143a7af4a662aa5016e4a8c7d75d619ea2efd8#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.7.4-dev"
+    "versionInfo" : "8.7.6-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd22",
     "checksums" : [ {
