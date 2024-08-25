@@ -269,7 +269,6 @@ public class R8Wrapper {
         return new ResourcePath() {
           @Override
           public String location() {
-            // Shrinker rules _must_ be in res/raw
             return "res/raw/asop_default.xml";
           }
         };
@@ -277,7 +276,7 @@ public class R8Wrapper {
 
       @Override
       public Kind getKind() {
-        return Kind.XML_FILE;
+        return Kind.KEEP_RULE_FILE;
       }
 
       @Override
