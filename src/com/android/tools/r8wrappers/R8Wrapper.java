@@ -100,6 +100,9 @@ public class R8Wrapper {
     // Allow use of -convertchecknotnull optimization. See b/280633711.
     System.setProperty("com.android.tools.r8.experimental.enableconvertchecknotnull", "1");
 
+    // Don't use new synthetic IA structure until suppression landed. See b/359546659.
+    System.setProperty("com.android.tools.r8.legacyNestDesugaringIAClasses", "1");
+
     R8Wrapper wrapper = new R8Wrapper();
     String[] remainingArgs = wrapper.parseWrapperArguments(args);
     if (!wrapper.useCompatPg && !wrapper.noImplicitDefaultInit) {
