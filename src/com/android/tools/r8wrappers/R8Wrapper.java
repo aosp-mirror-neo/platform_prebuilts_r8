@@ -20,6 +20,7 @@ import com.android.tools.r8.ArchiveProtoAndroidResourceConsumer;
 import com.android.tools.r8.ArchiveProtoAndroidResourceProvider;
 import com.android.tools.r8.BaseCompilerCommand;
 import com.android.tools.r8.CompilationFailedException;
+import com.android.tools.r8.DiagnosticsLevel;
 import com.android.tools.r8.ParseFlagInfo;
 import com.android.tools.r8.ParseFlagPrinter;
 import com.android.tools.r8.R8;
@@ -132,6 +133,7 @@ public class R8Wrapper {
   private Path resourceOutput = null;
   private final List<String> pgRules = new ArrayList<>();
   private boolean printInfoDiagnostics = false;
+  private boolean dontOptimize = false;
   private boolean optimizingResourceShrinking = false;
   private boolean noImplicitDefaultInit = false;
 
@@ -192,10 +194,15 @@ public class R8Wrapper {
           }
           // Zero argument PG rules.
         case "-dontshrink":
-        case "-dontoptimize":
         case "-dontobfuscate":
         case "-ignorewarnings":
           {
+            pgRules.add(arg);
+            break;
+          }
+        case "-dontoptimize":
+          {
+            dontOptimize = true;
             pgRules.add(arg);
             break;
           }
@@ -223,6 +230,12 @@ public class R8Wrapper {
 
   private void applyWrapperArguments(R8Command.Builder builder) {
     diagnosticsHandler.setPrintInfoDiagnostics(printInfoDiagnostics);
+    // Surface duplicate type warnings for optimized targets where duplicates are more dangerous.
+    // TODO(b/222468116): Bump the level to ERROR for all optimized targets after resolving current
+    // duplicates, and the default level to WARNING.
+    if (!dontOptimize) {
+      diagnosticsHandler.setDuplicateTypesDiagnosticsLevel(DiagnosticsLevel.WARNING);
+    }
     if (depsOutput != null) {
       Path codeOutput = builder.getOutputPath();
       Path target = Files.isDirectory(codeOutput) ? codeOutput.resolve("classes.dex") : codeOutput;
