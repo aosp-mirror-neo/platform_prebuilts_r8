@@ -135,6 +135,7 @@ public class R8Wrapper {
   private boolean printInfoDiagnostics = false;
   private boolean dontOptimize = false;
   private boolean optimizingResourceShrinking = false;
+  private boolean forceOptimizingResourceShrinking = false;
   private boolean noImplicitDefaultInit = false;
 
   private String[] parseWrapperArguments(String[] args) {
@@ -170,6 +171,11 @@ public class R8Wrapper {
             optimizingResourceShrinking = true;
             break;
           }
+        case "--force-optimized-resource-shrinking":
+        {
+          forceOptimizingResourceShrinking = true;
+          break;
+        }
         case "--no-implicit-default-init":
           {
             noImplicitDefaultInit = true;
@@ -248,6 +254,12 @@ public class R8Wrapper {
           new ArchiveProtoAndroidResourceConsumer(resourceOutput, resourceInput));
       if (optimizingResourceShrinking) {
         builder.setResourceShrinkerConfiguration(b -> b.enableOptimizedShrinkingWithR8().build());
+        if (!forceOptimizingResourceShrinking) {
+          // TODO(b/372264901): There is a range of test targets that rely on using ids for looking
+          // up ui elements. For now, keep all of these.
+          builder.addProguardConfiguration(List.of("-keep class **.R$id {<fields>;}"),
+              CLI_ORIGIN);
+        }
       }
     } else if (resourceOutput != null || resourceInput != null) {
       throw new RuntimeException("Both --resource-input and --resource-output must be specified");

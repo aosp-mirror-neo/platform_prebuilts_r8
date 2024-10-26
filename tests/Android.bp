@@ -33,7 +33,7 @@ package {
     default_applicable_licenses: ["prebuilts_r8_license"],
 }
 
-genrule {
+java_genrule {
     name: "r8retrace-dexdump-sample-app",
     out: ["dexdump.txt"],
     srcs: [":HelloActivityWithR8"],
@@ -52,7 +52,7 @@ java_binary_host {
     srcs: ["src/com/android/tools/r8/CreateStacktraceFromDexDumpTool.java"],
 }
 
-genrule {
+java_genrule {
     name: "r8retrace-create-stacktrace",
     out: ["stacktrace.txt"],
     srcs: [":r8retrace-dexdump-sample-app"],
@@ -61,7 +61,7 @@ genrule {
 }
 
 // Run retrace on the stack trace to produce a retraced stack trace.
-genrule {
+java_genrule {
     name: "r8retrace-run-retrace",
     out: ["retraced-stacktrace.txt"],
     tools: ["retrace"],
@@ -85,7 +85,7 @@ java_test_host {
     test_suites: ["general-tests"],
     srcs: ["src/com/android/tools/r8/CheckRetracedStacktraceTest.java"],
     static_libs: ["junit"],
-    java_resources: [
+    device_common_java_resources: [
         ":r8retrace-dexdump-sample-app",
         ":HelloActivityWithR8{.proguard_map}",
         ":r8retrace-create-stacktrace",
