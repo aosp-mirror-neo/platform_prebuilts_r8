@@ -64,6 +64,9 @@ public class R8Wrapper {
         new WrapperFlag("--resource-output", "Resource shrinker output."),
         new WrapperFlag("--optimized-resource-shrinking", "Use R8 optimizing resource pipeline."),
         new WrapperFlag(
+            "--store-store-fence-constructor-inlining",
+            "Use aggressive R8 constructor inlining."),
+        new WrapperFlag(
             "--no-implicit-default-init",
             "Disable compat-mode behavior of keeping default constructors in full mode."));
   }
@@ -137,6 +140,7 @@ public class R8Wrapper {
   private boolean optimizingResourceShrinking = false;
   private boolean forceOptimizingResourceShrinking = false;
   private boolean noImplicitDefaultInit = false;
+  private boolean storeStoreFenceConstructorInlining = false;
 
   private String[] parseWrapperArguments(String[] args) {
     List<String> remainingArgs = new ArrayList<>();
@@ -172,10 +176,10 @@ public class R8Wrapper {
             break;
           }
         case "--force-optimized-resource-shrinking":
-        {
-          forceOptimizingResourceShrinking = true;
-          break;
-        }
+          {
+            forceOptimizingResourceShrinking = true;
+            break;
+          }
         case "--no-implicit-default-init":
           {
             noImplicitDefaultInit = true;
@@ -224,6 +228,11 @@ public class R8Wrapper {
             pgRules.add(arg + " " + args[++i]);
             break;
           }
+        case "--store-store-fence-constructor-inlining":
+          {
+            storeStoreFenceConstructorInlining = true;
+            break;
+          }
         default:
           {
             remainingArgs.add(arg);
@@ -270,6 +279,9 @@ public class R8Wrapper {
     }
     if (useCompatPg) {
       builder.setProguardCompatibility(useCompatPg);
+    }
+    if (storeStoreFenceConstructorInlining) {
+      System.setProperty("com.android.tools.r8.enableConstructorInliningWithFinalFields", "1");
     }
   }
 
