@@ -88,6 +88,12 @@ java_binary_host {
     wrapper: "extractmarker.sh",
 }
 
+java_binary_host {
+    name: "extract-r8-rules",
+    main_class: "com.android.tools.r8.ExtractR8Rules",
+    static_libs: ["r8lib"],
+}
+
 java_library_host {
     name: "r8lib",
     srcs: ["src/**/*.java"],
