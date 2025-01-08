@@ -130,6 +130,7 @@ public class R8Wrapper {
   }
 
   private WrapperDiagnosticsHandler diagnosticsHandler = new WrapperDiagnosticsHandler();
+  private boolean ignoreLibraryExtendsProgram = false;
   private boolean useCompatPg = false;
   private Path depsOutput = null;
   private Path resourceInput = null;
@@ -147,6 +148,11 @@ public class R8Wrapper {
     for (int i = 0; i < args.length; i++) {
       String arg = args[i];
       switch (arg) {
+        case "--ignore-library-extends-program":
+          {
+            ignoreLibraryExtendsProgram = true;
+            break;
+          }
         case "--info":
           {
             printInfoDiagnostics = true;
@@ -273,7 +279,9 @@ public class R8Wrapper {
     } else if (resourceOutput != null || resourceInput != null) {
       throw new RuntimeException("Both --resource-input and --resource-output must be specified");
     }
-
+    if (ignoreLibraryExtendsProgram) {
+      System.setProperty("com.android.tools.r8.allowLibraryExtendsProgramInFullMode", "1");
+    }
     if (!pgRules.isEmpty()) {
       builder.addProguardConfiguration(pgRules, CLI_ORIGIN);
     }
