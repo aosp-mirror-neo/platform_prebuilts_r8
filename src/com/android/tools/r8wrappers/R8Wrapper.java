@@ -138,6 +138,7 @@ public class R8Wrapper {
   private final List<String> pgRules = new ArrayList<>();
   private boolean printInfoDiagnostics = false;
   private boolean dontOptimize = false;
+  private boolean keepRuntimeInvisibleAnnotations = false;
   private boolean optimizingResourceShrinking = false;
   private boolean forceOptimizingResourceShrinking = false;
   private boolean noImplicitDefaultInit = false;
@@ -156,6 +157,11 @@ public class R8Wrapper {
         case "--info":
           {
             printInfoDiagnostics = true;
+            break;
+          }
+        case "--keep-runtime-invisible-annotations":
+          {
+            keepRuntimeInvisibleAnnotations = true;
             break;
           }
         case "--resource-input":
@@ -281,6 +287,14 @@ public class R8Wrapper {
     }
     if (ignoreLibraryExtendsProgram) {
       System.setProperty("com.android.tools.r8.allowLibraryExtendsProgramInFullMode", "1");
+    }
+    if (keepRuntimeInvisibleAnnotations) {
+      builder.addProguardConfiguration(
+          List.of(
+              "-keepattributes RuntimeInvisibleAnnotations",
+              "-keepattributes RuntimeInvisibleParameterAnnotations",
+              "-keepattributes RuntimeInvisibleTypeAnnotations"),
+          CLI_ORIGIN);
     }
     if (!pgRules.isEmpty()) {
       builder.addProguardConfiguration(pgRules, CLI_ORIGIN);
