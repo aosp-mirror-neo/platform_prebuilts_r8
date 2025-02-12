@@ -103,6 +103,8 @@ public class R8Wrapper {
     System.setProperty("com.android.tools.r8.experimental.enablewhyareyounotinlining", "1");
     // Allow use of -convertchecknotnull optimization. See b/280633711.
     System.setProperty("com.android.tools.r8.experimental.enableconvertchecknotnull", "1");
+    // Allow conditional keep rule application against library references. See b/386409781.
+    System.setProperty("com.android.tools.r8.applyIfRulesToLibrary", "1");
 
     R8Wrapper wrapper = new R8Wrapper();
     String[] remainingArgs = wrapper.parseWrapperArguments(args);
