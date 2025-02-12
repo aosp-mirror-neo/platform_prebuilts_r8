@@ -2,7 +2,7 @@
   "SPDXID" : "SPDXRef-DOCUMENT",
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
-    "created" : "2025-01-31T17:43:15Z",
+    "created" : "2025-02-12T09:08:36Z",
     "creators" : [ "Tool: spdx-gradle-plugin", "Organization: Google LLC" ]
   },
   "name" : "R8 Compiler Suite",
@@ -53,7 +53,7 @@
     "name" : "GNU LESSER GENERAL PUBLIC LICENSE 2.1",
     "seeAlsos" : [ "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html" ]
   } ],
-  "documentNamespace" : "https://spdx.google/d4a1bdaa-f50b-56a8-bd26-a0d458c63b7f",
+  "documentNamespace" : "https://spdx.google/62435569-8353-5022-af45-01fddd1fd4b7",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "copyrightText" : "NOASSERTION",
@@ -64,9 +64,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@866a41b9785e10c2009b9d21c5d89275cd740c9b#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@944564bcea8513c1e34fcc8127c42ac072e735d8#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.10.6-dev"
+    "versionInfo" : "8.10.7-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
@@ -393,48 +393,48 @@
     "SPDXID" : "SPDXRef-gnrtd15",
     "checksums" : [ {
       "algorithm" : "SHA1",
-      "checksumValue" : "48228e400bdde2de1bb5af4e91373387b327b84c"
+      "checksumValue" : "950bc99bcacf2f0a2c073e53824a3f2f2086a192"
     }, {
       "algorithm" : "SHA256",
-      "checksumValue" : "ad8f1c7dbc5ac46f5cbd2d2e5de39c56c9db65dd7de716a84e01ce208758aee6"
+      "checksumValue" : "b8d3a92574ba1dfc49bdf205256d1ede0664148cb150ab62faa872b5e1bb4632"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-metadata-jvm/2.0.0/kotlin-metadata-jvm-2.0.0.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-metadata-jvm/2.1.0/kotlin-metadata-jvm-2.1.0.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-metadata-jvm@2.0.0?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-metadata-jvm@2.1.0?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "org.jetbrains.kotlin:kotlin-metadata-jvm:2.0.0",
+    "name" : "org.jetbrains.kotlin:kotlin-metadata-jvm:2.1.0",
     "supplier" : "Organization: JetBrains",
-    "versionInfo" : "2.0.0"
+    "versionInfo" : "2.1.0"
   }, {
     "SPDXID" : "SPDXRef-gnrtd16",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "240938c4aab8e73e888703e3e7d3f87383ffe5bd536d6d5e3c100d4cd0379fcf"
+      "checksumValue" : "d6f91b7b0f306cca299fec74fb7c34e4874d6f5ec5b925a0b4de21901e119c3f"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "b48df2c4aede9586cc931ead433bc02d6fd7879e"
+      "checksumValue" : "85f8b81009cda5890e54ba67d64b5e599c645020"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.0.0/kotlin-stdlib-2.0.0.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.1.0/kotlin-stdlib-2.1.0.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.0.0?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.1.0?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "org.jetbrains.kotlin:kotlin-stdlib:2.0.0",
+    "name" : "org.jetbrains.kotlin:kotlin-stdlib:2.1.0",
     "supplier" : "Organization: JetBrains",
-    "versionInfo" : "2.0.0"
+    "versionInfo" : "2.1.0"
   }, {
     "SPDXID" : "SPDXRef-gnrtd17",
     "checksums" : [ {
@@ -485,25 +485,25 @@
     "SPDXID" : "SPDXRef-gnrtd19",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "49b66f9a89d50fd2954c2e8aeac80e4f488b0a09322a25efad6261576713dc0f"
+      "checksumValue" : "3ad2fcad0c09ddc0922debab4444d612144b7b465b75a8bb7587e20ddfafd799"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "34eeb4eed5f493cdbb760ef50a5653ec414006bf"
+      "checksumValue" : "669e1d35e4ca1797f9ddb2830dd6c36c0ca531e4"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.9.20/kotlin-reflect-1.9.20.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-reflect/2.0.21/kotlin-reflect-2.0.21.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@1.9.20?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@2.0.21?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "org.jetbrains.kotlin:kotlin-reflect:1.9.20",
+    "name" : "org.jetbrains.kotlin:kotlin-reflect:2.0.21",
     "supplier" : "Organization: JetBrains",
-    "versionInfo" : "1.9.20"
+    "versionInfo" : "2.0.21"
   }, {
     "SPDXID" : "SPDXRef-gnrtd20",
     "copyrightText" : "NOASSERTION",
@@ -514,9 +514,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@866a41b9785e10c2009b9d21c5d89275cd740c9b#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@944564bcea8513c1e34fcc8127c42ac072e735d8#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.10.6-dev"
+    "versionInfo" : "8.10.7-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd21",
     "copyrightText" : "NOASSERTION",
@@ -527,9 +527,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@866a41b9785e10c2009b9d21c5d89275cd740c9b#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@944564bcea8513c1e34fcc8127c42ac072e735d8#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "8.10.6-dev"
+    "versionInfo" : "8.10.7-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd22",
     "checksums" : [ {
@@ -1450,6 +1450,29 @@
     "name" : "org.jetbrains.intellij.deps:trove4j:1.0.20200330",
     "supplier" : "Organization: JetBrains",
     "versionInfo" : "1.0.20200330"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd62",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "49b66f9a89d50fd2954c2e8aeac80e4f488b0a09322a25efad6261576713dc0f"
+    }, {
+      "algorithm" : "SHA1",
+      "checksumValue" : "34eeb4eed5f493cdbb760ef50a5653ec414006bf"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.9.20/kotlin-reflect-1.9.20.jar",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@1.9.20?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "Apache-2.0",
+    "licenseInfoFromFiles" : [ ],
+    "name" : "org.jetbrains.kotlin:kotlin-reflect:1.9.20",
+    "supplier" : "Organization: JetBrains",
+    "versionInfo" : "1.9.20"
   } ],
   "relationships" : [ {
     "spdxElementId" : "SPDXRef-DOCUMENT",
@@ -1470,7 +1493,7 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd1"
+    "relatedSpdxElement" : "SPDXRef-gnrtd20"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
@@ -1478,19 +1501,15 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd1"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd0",
+    "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd21"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd20"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd0",
-    "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd8"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd0",
-    "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd7"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
@@ -1499,6 +1518,10 @@
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd15"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd0",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd7"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd2",
     "relationshipType" : "DEPENDS_ON",
@@ -1518,15 +1541,15 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd8",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd14"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd8",
-    "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd12"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd8",
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd11"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd8",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd14"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd8",
     "relationshipType" : "DEPENDS_ON",
@@ -1542,23 +1565,19 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd21",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd35"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd21",
-    "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd24"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd21",
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd22"
   }, {
+    "spdxElementId" : "SPDXRef-gnrtd21",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd35"
+  }, {
     "spdxElementId" : "SPDXRef-gnrtd22",
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd23"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd24",
-    "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd25"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd24",
     "relationshipType" : "DEPENDS_ON",
@@ -1567,6 +1586,10 @@
     "spdxElementId" : "SPDXRef-gnrtd24",
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd26"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd24",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd25"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd26",
     "relationshipType" : "DEPENDS_ON",
@@ -1590,19 +1613,23 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd31",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd33"
+    "relatedSpdxElement" : "SPDXRef-gnrtd32"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd31",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd32"
+    "relatedSpdxElement" : "SPDXRef-gnrtd33"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd35",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd38"
+    "relatedSpdxElement" : "SPDXRef-gnrtd62"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd35",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd36"
+    "relatedSpdxElement" : "SPDXRef-gnrtd57"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd35",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd39"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd35",
     "relationshipType" : "DEPENDS_ON",
@@ -1614,23 +1641,15 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd35",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd57"
+    "relatedSpdxElement" : "SPDXRef-gnrtd38"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd35",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd39"
+    "relatedSpdxElement" : "SPDXRef-gnrtd36"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd36",
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd37"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd39",
-    "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd53"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd39",
-    "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd52"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd39",
     "relationshipType" : "DEPENDS_ON",
@@ -1640,13 +1659,13 @@
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd40"
   }, {
-    "spdxElementId" : "SPDXRef-gnrtd40",
+    "spdxElementId" : "SPDXRef-gnrtd39",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd42"
+    "relatedSpdxElement" : "SPDXRef-gnrtd52"
   }, {
-    "spdxElementId" : "SPDXRef-gnrtd40",
+    "spdxElementId" : "SPDXRef-gnrtd39",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd41"
+    "relatedSpdxElement" : "SPDXRef-gnrtd53"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd40",
     "relationshipType" : "DEPENDS_ON",
@@ -1654,7 +1673,15 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd40",
     "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd42"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd40",
+    "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd44"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd40",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd41"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd44",
     "relationshipType" : "DEPENDS_ON",
@@ -1666,15 +1693,15 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd44",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd50"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd44",
-    "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd49"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd44",
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd45"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd44",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd50"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd45",
     "relationshipType" : "DEPENDS_ON",
@@ -1686,11 +1713,11 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd54",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd55"
+    "relatedSpdxElement" : "SPDXRef-gnrtd56"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd54",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd56"
+    "relatedSpdxElement" : "SPDXRef-gnrtd55"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd58",
     "relationshipType" : "DEPENDS_ON",
