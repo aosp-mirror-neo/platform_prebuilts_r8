@@ -64,6 +64,7 @@ public class R8Wrapper {
         new WrapperFlag("--resource-input", "Resource input for the resource shrinker."),
         new WrapperFlag("--resource-output", "Resource shrinker output."),
         new WrapperFlag("--optimized-resource-shrinking", "Use R8 optimizing resource pipeline."),
+        new WrapperFlag("--protect-api-surface", "API surface protection for libcore."),
         new WrapperFlag(
             "--store-store-fence-constructor-inlining",
             "Use aggressive R8 constructor inlining."),
@@ -148,6 +149,7 @@ public class R8Wrapper {
   private boolean optimizingResourceShrinking = false;
   private boolean forceOptimizingResourceShrinking = false;
   private boolean noImplicitDefaultInit = false;
+  private boolean protectApiSurface = false;
   private boolean storeStoreFenceConstructorInlining = false;
   private final List<String> excludeClasses = new ArrayList<>();
 
@@ -260,6 +262,11 @@ public class R8Wrapper {
             pgRules.add(arg + " " + args[++i]);
             break;
           }
+        case "--protect-api-surface":
+          {
+            protectApiSurface = true;
+            break;
+          }
         case "--store-store-fence-constructor-inlining":
           {
             storeStoreFenceConstructorInlining = true;
@@ -323,6 +330,9 @@ public class R8Wrapper {
     }
     if (!pgRules.isEmpty()) {
       builder.addProguardConfiguration(pgRules, CLI_ORIGIN);
+    }
+    if (protectApiSurface) {
+      builder.setProtectApiSurface(true);
     }
     if (useCompatPg) {
       builder.setProguardCompatibility(useCompatPg);
