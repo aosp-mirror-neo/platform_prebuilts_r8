@@ -110,6 +110,8 @@ public class R8Wrapper {
     System.setProperty("com.android.tools.r8.experimental.enableconvertchecknotnull", "1");
     // Allow conditional keep rule application against library references. See b/386409781.
     System.setProperty("com.android.tools.r8.applyIfRulesToLibrary", "1");
+    // Do not keep runtime invisible annotations with @KeepForApi. See b/399021897.
+    System.setProperty("com.android.tools.r8.keepanno.unkeepInvisibleAnnotationsInKeepForApi", "1");
 
     R8Wrapper wrapper = new R8Wrapper();
     String[] remainingArgs = wrapper.parseWrapperArguments(args);
