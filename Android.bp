@@ -94,6 +94,12 @@ java_binary_host {
     static_libs: ["r8lib"],
 }
 
+java_binary_host {
+    name: "tracereferences",
+    main_class: "com.android.tools.r8.tracereferences.TraceReferences",
+    static_libs: ["r8lib"],
+}
+
 java_library_host {
     name: "r8lib",
     srcs: ["src/**/*.java"],
