@@ -26,6 +26,7 @@ android_app {
     },
     optimize: {
         enabled: true,
+        enabled_on_eng: true,
         shrink: true,
         optimize: true,
         obfuscate: true,
