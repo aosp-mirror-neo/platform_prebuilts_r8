@@ -25,18 +25,20 @@ import com.android.tools.r8.Version;
 import com.android.tools.r8.origin.Origin;
 import com.android.tools.r8wrappers.utils.WrapperDiagnosticsHandler;
 import com.android.tools.r8wrappers.utils.WrapperFlag;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class D8Wrapper {
 
   private static final String WRAPPER_STRING = "d8-aosp-wrapper";
 
-  private static final Origin CLI_ORIGIN =
+  protected static final Origin CLI_ORIGIN =
       new Origin(Origin.root()) {
         @Override
         public String part() {
@@ -44,12 +46,25 @@ public class D8Wrapper {
         }
       };
 
-  private static final String NO_DEX_FLAG = "--no-dex-input-jar";
-  private static final String INFO_FLAG = "--info";
+  protected static final String NO_DEX_FLAG = "--no-dex-input-jar";
+  protected static final String INFO_FLAG = "--info";
+  protected static final String PACKAGE_RSP = "--packages";
+  protected static final String MODIFIED_PACKAGE_RSP = "--mod-packages";
+
   private static List<ParseFlagInfo> getAdditionalFlagsInfo() {
     return Arrays.asList(
         new WrapperFlag(NO_DEX_FLAG, "Input archive with potential all dex code ignored."),
-        new WrapperFlag(INFO_FLAG, "Print the info-level log messages from the compiler."));
+        new WrapperFlag(INFO_FLAG, "Print the info-level log messages from the compiler."),
+        new WrapperFlag(PACKAGE_RSP,
+                "List of packages present across all .class files in a jar.\n" +
+                        "When present, package based dex is used.\n" +
+                        "Should be passed as a rsp/text file containing packages separated by" +
+                        "whitespace."),
+        new WrapperFlag(MODIFIED_PACKAGE_RSP,
+                "List of modified present across all .class files in a jar, between this " +
+                        "and previous iteration, for incremental dex.\n" +
+                        "Should be passed as a rsp/text file containing packages separated by " +
+                        "whitespace."));
   }
 
   private static String getUsageMessage() {
@@ -75,61 +90,84 @@ public class D8Wrapper {
     return builder;
   }
 
-  public static void main(String[] args) throws CompilationFailedException {
-    D8Wrapper wrapper = new D8Wrapper();
+  private static boolean isPackageBasedCompilation(String[] args) {
+    for (int i = 0; i < args.length; i++) {
+      if (args[i].equals(PACKAGE_RSP)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public static void main(String[] args)
+      throws CompilationFailedException, IOException, ExecutionException, InterruptedException {
+    boolean packageBasedCompilation = isPackageBasedCompilation(args);
+    D8Wrapper wrapper = packageBasedCompilation ? new D8PackageBasedWrapper() : new D8Wrapper();
     String[] remainingArgs = wrapper.parseWrapperArguments(args);
+    if (printHelpOrVersion(wrapper, remainingArgs)) {
+      return;
+    }
+    wrapper.run(remainingArgs);
+  }
+
+  public void run(String[] remainingArgs)
+      throws CompilationFailedException, IOException, ExecutionException, InterruptedException {
     D8Command.Builder builder = D8Command.parse(
-        remainingArgs, CLI_ORIGIN, wrapper.diagnosticsHandler);
-    if (builder.isPrintHelp()) {
-      System.out.println(getUsageMessage());
-      return;
-    }
-    if (builder.isPrintVersion()) {
-      System.out.println("D8(" + WRAPPER_STRING + ") " + Version.getVersionString());
-      return;
-    }
-    wrapper.applyWrapperArguments(builder);
+        remainingArgs, CLI_ORIGIN, diagnosticsHandler);
+    applyWrapperArguments(builder);
     R8Wrapper.applyCommonCompilerArguments(builder);
     D8.run(builder.build());
   }
 
-  private WrapperDiagnosticsHandler diagnosticsHandler = new WrapperDiagnosticsHandler();
-  private boolean printInfoDiagnostics = false;
-  private List<Path> noDexArchives = new ArrayList<>();
+  private static boolean printHelpOrVersion(D8Wrapper wrapper, String[] remainingArgs) {
+    D8Command.Builder builder = D8Command.parse(
+        remainingArgs, CLI_ORIGIN, wrapper.diagnosticsHandler);
+    if (builder.isPrintHelp()) {
+      System.out.println(getUsageMessage());
+      return true;
+    }
+    if (builder.isPrintVersion()) {
+      System.out.println("D8(" + WRAPPER_STRING + ") " + Version.getVersionString());
+      return true;
+    }
+    return false;
+  }
 
-  private String[] parseWrapperArguments(String[] args) {
+  protected WrapperDiagnosticsHandler diagnosticsHandler = new WrapperDiagnosticsHandler();
+  protected boolean printInfoDiagnostics = false;
+  protected List<Path> noDexArchives = new ArrayList<>();
+
+  public String[] parseWrapperArguments(String[] args) {
     List<String> remainingArgs = new ArrayList<>();
     for (int i = 0; i < args.length; i++) {
       String arg = args[i];
       switch (arg) {
-        case INFO_FLAG:
-          {
-            printInfoDiagnostics = true;
-            break;
+        case INFO_FLAG: {
+          printInfoDiagnostics = true;
+          break;
+        }
+        case NO_DEX_FLAG: {
+          if (++i >= args.length) {
+            throw new RuntimeException("Missing argument to " + NO_DEX_FLAG);
           }
-        case NO_DEX_FLAG:
-          {
-            if (++i >= args.length) {
-              throw new RuntimeException("Missing argument to " + NO_DEX_FLAG);
-            }
-            Path path = Paths.get(args[i]);
-            if (!Files.isRegularFile(path)) {
-              throw new RuntimeException("Unexpected argument to " + NO_DEX_FLAG + ". Expected an archive");
-            }
-            noDexArchives.add(path);
-            break;
+          Path path = Paths.get(args[i]);
+          if (!Files.isRegularFile(path)) {
+            throw new RuntimeException("Unexpected argument to " + NO_DEX_FLAG +
+                ". Expected an archive");
           }
-        default:
-          {
-            remainingArgs.add(arg);
-            break;
-          }
+          noDexArchives.add(path);
+          break;
+        }
+        default: {
+          remainingArgs.add(arg);
+          break;
+        }
       }
     }
     return remainingArgs.toArray(new String[0]);
   }
 
-  private void applyWrapperArguments(D8Command.Builder builder) {
+  private void applyWrapperArguments(D8Command.Builder builder) throws IOException {
     diagnosticsHandler.setWarnOnUnsupportedMainDexList(true);
     diagnosticsHandler.setPrintInfoDiagnostics(printInfoDiagnostics);
     for (Path path : noDexArchives) {
