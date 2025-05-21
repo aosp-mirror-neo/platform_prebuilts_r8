@@ -302,14 +302,12 @@ public class R8Wrapper {
           new PathOrigin(resourceInput)));
       builder.setAndroidResourceConsumer(
           new ArchiveProtoAndroidResourceConsumer(resourceOutput, resourceInput));
-      if (optimizingResourceShrinking) {
-        builder.setResourceShrinkerConfiguration(b -> b.enableOptimizedShrinkingWithR8().build());
-        if (!forceOptimizingResourceShrinking) {
-          // TODO(b/372264901): There is a range of test targets that rely on using ids for looking
-          // up ui elements. For now, keep all of these.
-          builder.addProguardConfiguration(List.of("-keep class **.R$id {<fields>;}"),
-              CLI_ORIGIN);
-        }
+      builder.setResourceShrinkerConfiguration(b -> b.enableOptimizedShrinkingWithR8().build());
+      if (!forceOptimizingResourceShrinking) {
+        // TODO(b/372264901): There is a range of test targets that rely on using ids for looking
+        // up ui elements. For now, keep all of these.
+        builder.addProguardConfiguration(List.of("-keep class **.R$id {<fields>;}"),
+            CLI_ORIGIN);
       }
     } else if (resourceOutput != null || resourceInput != null) {
       throw new RuntimeException("Both --resource-input and --resource-output must be specified");
