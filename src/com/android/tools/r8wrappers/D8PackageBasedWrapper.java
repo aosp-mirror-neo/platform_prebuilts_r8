@@ -161,13 +161,13 @@ public class D8PackageBasedWrapper extends D8Wrapper {
     Set<ProgramResource> programResources = getProgramResources(packagesRecompiled);
     List<Future<?>> futures = new ArrayList<>();
     for (String pack : packagesRecompiled) {
-      D8Command.Builder builder = D8Command.parse(remainingArgs, CLI_ORIGIN,
-          diagnosticsHandler);
-      applyWrapperArguments(builder, pack, programResources, baseOutputDir);
-      R8Wrapper.applyCommonCompilerArguments(builder);
-      D8Command command = builder.build();
       futures.add(executorService.submit(() -> {
+        D8Command.Builder builder = D8Command.parse(remainingArgs, CLI_ORIGIN,
+            diagnosticsHandler);
+        applyWrapperArguments(builder, pack, programResources, baseOutputDir);
+        R8Wrapper.applyCommonCompilerArguments(builder);
         try {
+          D8Command command = builder.build();
           D8.run(command);
         } catch (CompilationFailedException e) {
           throw new RuntimeException(e);
