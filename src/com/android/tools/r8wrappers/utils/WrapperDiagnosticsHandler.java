@@ -7,6 +7,7 @@ import com.android.tools.r8.Diagnostic;
 import com.android.tools.r8.DiagnosticsHandler;
 import com.android.tools.r8.DiagnosticsLevel;
 import com.android.tools.r8.errors.DuplicateTypeInProgramAndLibraryDiagnostic;
+import com.android.tools.r8.errors.FinalRClassEntriesWithOptimizedShrinkingDiagnostic;
 import com.android.tools.r8.errors.UnsupportedMainDexListUsageDiagnostic;
 
 public class WrapperDiagnosticsHandler implements DiagnosticsHandler {
@@ -39,6 +40,9 @@ public class WrapperDiagnosticsHandler implements DiagnosticsHandler {
           isBenignDuplicateType((DuplicateTypeInProgramAndLibraryDiagnostic) diagnostic)) {
         level = DiagnosticsLevel.INFO;
       }
+    }
+    if (diagnostic instanceof FinalRClassEntriesWithOptimizedShrinkingDiagnostic) {
+      return DiagnosticsLevel.ERROR;
     }
     if (!printInfoDiagnostics && level == DiagnosticsLevel.INFO) {
       return DiagnosticsLevel.NONE;
