@@ -15,7 +15,9 @@
  */
 package com.android.tools.r8wrappers;
 
+import com.android.tools.r8.ArchiveClassFileProvider;
 import com.android.tools.r8.ArchiveProgramResourceProvider;
+import com.android.tools.r8.ClassFileResourceProvider;
 import com.android.tools.r8.CompilationFailedException;
 import com.android.tools.r8.D8;
 import com.android.tools.r8.D8Command;
@@ -42,10 +44,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -61,8 +60,18 @@ public class D8PackageBasedWrapper extends D8Wrapper {
   // Match either a single-quoted string, OR a sequence of non-whitespace characters.
   private static final String FILE_PATH_REGEX = "'([^']*)'|(\\S+)";
 
+  private static List<String> extractAndRemoveArguments(String[] remainingArgs, String argument) {
+    ArrayList<String> result = new ArrayList<>();
+    String nextValue = extractAndMaybeRemoveArgument(remainingArgs, argument, true, false);
+    while (nextValue != null) {
+      result.add(nextValue);
+      nextValue = extractAndMaybeRemoveArgument(remainingArgs, argument, true, false);
+    }
+    return result;
+  }
+
   private static String extractAndMaybeRemoveArgument(
-      String[] remainingArgs, String argument, boolean remove) {
+      String[] remainingArgs, String argument, boolean remove, boolean throwIfNotFound) {
     String base = null;
     for (int i = 0; i < remainingArgs.length; i++) {
       if (remainingArgs[i].equals(argument)) {
@@ -71,9 +80,10 @@ public class D8PackageBasedWrapper extends D8Wrapper {
           remainingArgs[i] = "";
           remainingArgs[i + 1] = "";
         }
+        break;
       }
     }
-    if (base == null) {
+    if (base == null && throwIfNotFound) {
       throw new RuntimeException("Can't do sharded compilation without argument: " + argument);
     }
     return base;
@@ -81,17 +91,21 @@ public class D8PackageBasedWrapper extends D8Wrapper {
 
   @Override
   public void run(String[] remainingArgs)
-      throws CompilationFailedException, ExecutionException, InterruptedException {
-    String baseOutputDir = extractAndMaybeRemoveArgument(remainingArgs, "--output", true);
+      throws CompilationFailedException, ExecutionException, InterruptedException, IOException {
+    String baseOutputDir = extractAndMaybeRemoveArgument(remainingArgs, "--output", true, true);
+    List<String> libraries = extractAndRemoveArguments(remainingArgs, "--lib");
+
     int minApi = Integer.parseInt(
-        extractAndMaybeRemoveArgument(remainingArgs, "--min-api", false));
+        extractAndMaybeRemoveArgument(remainingArgs, "--min-api", false, true));
+
     int dexMergeShardCount =
         (int) Math.ceil((double) packageDexPath.size() / MAX_PACKAGES_PER_SHARD);
     ExecutorService executorService = Executors.newWorkStealingPool(MAX_CONCURRENT_D8_THREADS);
 
     Set<String> packagesRecompiled = new HashSet<>(modPackageDexPath);
 
-    compileIndividualPackages(remainingArgs, baseOutputDir, executorService, packagesRecompiled);
+    compileIndividualPackages(remainingArgs, baseOutputDir, executorService, packagesRecompiled,
+        libraries);
     mergeChangedShards(baseOutputDir, executorService, packagesRecompiled, dexMergeShardCount,
         minApi);
   }
@@ -156,15 +170,21 @@ public class D8PackageBasedWrapper extends D8Wrapper {
       String[] remainingArgs,
       String baseOutputDir,
       ExecutorService executorService,
-      Set<String> packagesRecompiled)
-      throws CompilationFailedException, ExecutionException, InterruptedException {
+      Set<String> packagesRecompiled,
+      List<String> libraries)
+      throws ExecutionException, InterruptedException, IOException {
     Set<ProgramResource> programResources = getProgramResources(packagesRecompiled);
+    SynchronizedClassFileProvider libraryProvider =
+        new SynchronizedClassFileProvider(libraries.stream().map(Paths::get).collect(
+            Collectors.toList()));
+    SynchronizedClassFileProvider classpathProvider = new SynchronizedClassFileProvider(
+        noDexArchives);
     List<Future<?>> futures = new ArrayList<>();
     for (String pack : packagesRecompiled) {
       futures.add(executorService.submit(() -> {
-        D8Command.Builder builder = D8Command.parse(remainingArgs, CLI_ORIGIN,
-            diagnosticsHandler);
-        applyWrapperArguments(builder, pack, programResources, baseOutputDir);
+        D8Command.Builder builder = D8Command.parse(remainingArgs, CLI_ORIGIN, diagnosticsHandler);
+        applyWrapperArguments(builder, pack, programResources, baseOutputDir, libraryProvider,
+            classpathProvider);
         R8Wrapper.applyCommonCompilerArguments(builder);
         try {
           D8Command command = builder.build();
@@ -179,7 +199,9 @@ public class D8PackageBasedWrapper extends D8Wrapper {
 
   private void applyWrapperArguments(
       D8Command.Builder builder, String currentPackage,
-      Collection<ProgramResource> programResources, String baseOutputDir) {
+      Collection<ProgramResource> programResources,
+      String baseOutputDir, ClassFileResourceProvider libraryProvider,
+      SynchronizedClassFileProvider classpathProvider) {
     diagnosticsHandler.setWarnOnUnsupportedMainDexList(true);
     diagnosticsHandler.setPrintInfoDiagnostics(printInfoDiagnostics);
     // package based dex outputs to the package path relative to base output dir
@@ -197,6 +219,8 @@ public class D8PackageBasedWrapper extends D8Wrapper {
           return programResources.stream().filter(programResourcePredicate)
               .collect(Collectors.toSet());
         });
+    builder.addLibraryResourceProvider(libraryProvider);
+    builder.addClasspathResourceProvider(classpathProvider);
   }
 
   private Set<ProgramResource> getProgramResources(Set<String> packagesRecompiled) {
@@ -400,6 +424,43 @@ public class D8PackageBasedWrapper extends D8Wrapper {
         throw new RuntimeException("Error recreating directory " + dirPath + ": " + e.getMessage(),
             e);
       }
+    }
+  }
+
+  public static class SynchronizedClassFileProvider implements ClassFileResourceProvider {
+    private Set<String> availableDescriptors = new HashSet<>();
+    private Map<String, ProgramResource> cachedResources = new ConcurrentHashMap<>();
+    private List<ClassFileResourceProvider> providers = new ArrayList<>();
+
+    public SynchronizedClassFileProvider(List<Path> paths) throws IOException {
+      for (Path path : paths) {
+        ArchiveClassFileProvider classFileProvider = new ArchiveClassFileProvider(path);
+        availableDescriptors.addAll(classFileProvider.getClassDescriptors());
+        providers.add(classFileProvider);
+      }
+    }
+
+    @Override
+    public Set<String> getClassDescriptors() {
+      return availableDescriptors;
+    }
+
+
+    @Override
+    public ProgramResource getProgramResource(String descriptor) {
+      // Thread safe by using the concurrent map implementation.
+      return cachedResources.computeIfAbsent(descriptor, newDescriptor -> {
+        if (!availableDescriptors.contains(newDescriptor)) {
+          return null;
+        }
+        for (ClassFileResourceProvider provider : providers) {
+          ProgramResource programResource = provider.getProgramResource(newDescriptor);
+          if (programResource != null) {
+            return programResource;
+          }
+        }
+        return null;
+      });
     }
   }
 }
