@@ -55,7 +55,10 @@ public class RetraceWrapper {
 
   /** Default paths to search for mapping files. */
   private static final List<String> AOSP_MAP_SEARCH_PATHS =
-      Arrays.asList("out/target/common/obj/APPS", "out/target/common/obj/JAVA_LIBRARIES");
+      Arrays.asList(
+          "out/target/common/obj/APPS",
+          "out/target/common/obj/JAVA_LIBRARIES",
+          "out/soong/.intermediates");
 
   private static final String USAGE =
       String.join(
