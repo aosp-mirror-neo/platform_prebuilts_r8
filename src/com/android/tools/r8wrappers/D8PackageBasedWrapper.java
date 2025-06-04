@@ -55,6 +55,7 @@ public class D8PackageBasedWrapper extends D8Wrapper {
 
   private Set<String> packageDexPath = new HashSet<>();
   private Set<String> modPackageDexPath = new HashSet<>();
+  private String basePackageDirectory;
   private static final int MAX_PACKAGES_PER_SHARD = 20;
   private static final int MAX_CONCURRENT_D8_THREADS = 8;
   // Match either a single-quoted string, OR a sequence of non-whitespace characters.
@@ -104,10 +105,11 @@ public class D8PackageBasedWrapper extends D8Wrapper {
 
     Set<String> packagesRecompiled = new HashSet<>(modPackageDexPath);
 
-    compileIndividualPackages(remainingArgs, baseOutputDir, executorService, packagesRecompiled,
+    compileIndividualPackages(remainingArgs, basePackageDirectory, executorService,
+        packagesRecompiled,
         libraries);
-    mergeChangedShards(baseOutputDir, executorService, packagesRecompiled, dexMergeShardCount,
-        minApi);
+    mergeChangedShards(baseOutputDir, basePackageDirectory, executorService, packagesRecompiled,
+        dexMergeShardCount, minApi);
   }
 
   public String[] parseWrapperArguments(String[] args) {
@@ -127,6 +129,13 @@ public class D8PackageBasedWrapper extends D8Wrapper {
             throw new RuntimeException("Missing argument to " + MODIFIED_PACKAGE_RSP);
           }
           modPackageDexPath = readPackages(Path.of(args[i]));
+          break;
+        }
+        case PACKAGE_OUTPUT: {
+          if (++i >= args.length) {
+            throw new RuntimeException("Missing argument to " + PACKAGE_OUTPUT);
+          }
+          basePackageDirectory = args[i];
           break;
         }
         default: {
@@ -168,7 +177,7 @@ public class D8PackageBasedWrapper extends D8Wrapper {
   // output directory.
   private void compileIndividualPackages(
       String[] remainingArgs,
-      String baseOutputDir,
+      String basePackageDirectory,
       ExecutorService executorService,
       Set<String> packagesRecompiled,
       List<String> libraries)
@@ -183,8 +192,8 @@ public class D8PackageBasedWrapper extends D8Wrapper {
     for (String pack : packagesRecompiled) {
       futures.add(executorService.submit(() -> {
         D8Command.Builder builder = D8Command.parse(remainingArgs, CLI_ORIGIN, diagnosticsHandler);
-        applyWrapperArguments(builder, pack, programResources, baseOutputDir, libraryProvider,
-            classpathProvider);
+        applyWrapperArguments(builder, pack, programResources, basePackageDirectory,
+            libraryProvider, classpathProvider);
         R8Wrapper.applyCommonCompilerArguments(builder);
         try {
           D8Command command = builder.build();
@@ -200,12 +209,12 @@ public class D8PackageBasedWrapper extends D8Wrapper {
   private void applyWrapperArguments(
       D8Command.Builder builder, String currentPackage,
       Collection<ProgramResource> programResources,
-      String baseOutputDir, ClassFileResourceProvider libraryProvider,
+      String basePackageDirectory, ClassFileResourceProvider libraryProvider,
       SynchronizedClassFileProvider classpathProvider) {
     diagnosticsHandler.setWarnOnUnsupportedMainDexList(true);
     diagnosticsHandler.setPrintInfoDiagnostics(printInfoDiagnostics);
     // package based dex outputs to the package path relative to base output dir
-    String packageOutputDir = baseOutputDir + "/" + currentPackage;
+    String packageOutputDir = basePackageDirectory + "/" + currentPackage;
     // flush the package output directory, so that any effects of previous dex are removed.
     flushDirFiles(packageOutputDir);
     builder.setOutput(Paths.get(packageOutputDir), OutputMode.DexIndexed);
@@ -214,7 +223,14 @@ public class D8PackageBasedWrapper extends D8Wrapper {
           Predicate<ProgramResource> programResourcePredicate = r -> {
             // This is java descriptor based, e.g., Lcom/android/foo/MyClasss;
             String str = r.getClassDescriptors().stream().findFirst().get();
-            return currentPackage.equals(str.substring(1, str.lastIndexOf('/')));
+            int lastIdx = str.lastIndexOf('/');
+            String classPackage;
+            if (lastIdx == -1) {
+              classPackage = ".";
+            } else {
+              classPackage = str.substring(1, lastIdx);
+            }
+            return currentPackage.equals(classPackage);
           };
           return programResources.stream().filter(programResourcePredicate)
               .collect(Collectors.toSet());
@@ -226,7 +242,13 @@ public class D8PackageBasedWrapper extends D8Wrapper {
   private Set<ProgramResource> getProgramResources(Set<String> packagesRecompiled) {
     Predicate<String> shouldReadEntry = className -> {
       int lastIdx = className.lastIndexOf('/');
-      return packagesRecompiled.contains(className.substring(0, lastIdx != -1 ? lastIdx : 0));
+      String classPackage;
+      if (lastIdx == -1) {
+        classPackage = ".";
+      } else {
+        classPackage = className.substring(0, lastIdx);
+      }
+      return packagesRecompiled.contains(classPackage);
     };
     Set<ProgramResource> programResources = new HashSet<>();
     for (Path noDexArchive : noDexArchives) {
@@ -252,6 +274,7 @@ public class D8PackageBasedWrapper extends D8Wrapper {
   // should trigger a full merge across all dex-shards.
   private void mergeChangedShards(
       String baseOutputDir,
+      String basePackageDirectory,
       ExecutorService executorService,
       Set<String> packagesRecompiled,
       int dexMergeShardCount,
@@ -274,7 +297,7 @@ public class D8PackageBasedWrapper extends D8Wrapper {
       builder.setMinApiLevel(minApi);
       entry.getValue().forEach(pack -> {
         try {
-          builder.addProgramFiles(getDexFilesInDirectory(baseOutputDir + "/" + pack));
+          builder.addProgramFiles(getDexFilesInDirectory(basePackageDirectory + "/" + pack));
         } catch (IOException e) {
           throw new RuntimeException(e);
         }

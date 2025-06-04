@@ -50,6 +50,7 @@ public class D8Wrapper {
   protected static final String INFO_FLAG = "--info";
   protected static final String PACKAGE_RSP = "--packages";
   protected static final String MODIFIED_PACKAGE_RSP = "--mod-packages";
+  protected static final String PACKAGE_OUTPUT = "--package-output";
 
   private static List<ParseFlagInfo> getAdditionalFlagsInfo() {
     return Arrays.asList(
