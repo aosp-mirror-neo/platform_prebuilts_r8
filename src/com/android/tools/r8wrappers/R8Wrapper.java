@@ -112,6 +112,8 @@ public class R8Wrapper {
     System.setProperty("com.android.tools.r8.applyIfRulesToLibrary", "1");
     // Do not keep runtime invisible annotations with @KeepForApi. See b/399021897.
     System.setProperty("com.android.tools.r8.keepanno.unkeepInvisibleAnnotationsInKeepForApi", "1");
+    // Apply keep naming rules to R8-generated synthetics. See b/422530029.
+    System.setProperty("com.android.tools.r8.synthesis.restrictrenaming", "1");
 
     R8Wrapper wrapper = new R8Wrapper();
     String[] remainingArgs = wrapper.parseWrapperArguments(args);
