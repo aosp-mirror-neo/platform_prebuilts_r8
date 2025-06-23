@@ -73,7 +73,10 @@ public class R8Wrapper {
             "Disable compat-mode behavior of keeping default constructors in full mode."),
         new WrapperFlag(
             "--exclude <file>",
-            "Path to file containing name of classes that should not be compiled using R8."));
+            "Path to file containing name of classes that should not be compiled using R8."),
+        new WrapperFlag(
+            "--include <file>",
+            "Path to file containing name of classes that should be compiled using R8."));
   }
 
   private static String getUsageMessage() {
@@ -154,6 +157,7 @@ public class R8Wrapper {
   private boolean protectApiSurface = false;
   private boolean storeStoreFenceConstructorInlining = false;
   private final List<String> excludeClasses = new ArrayList<>();
+  private final List<String> includeClasses = new ArrayList<>();
 
   private String[] parseWrapperArguments(String[] args) throws IOException {
     List<String> remainingArgs = new ArrayList<>();
@@ -173,6 +177,19 @@ public class R8Wrapper {
             }
             break;
           }
+        case "--include":
+        {
+          String nextArg = args[++i];
+          Path includeFile = Paths.get(nextArg);
+          for (String line : Files.readAllLines(includeFile)) {
+            line = line.trim();
+            if (line.isEmpty() || line.startsWith("#")) {
+              continue;
+            }
+            includeClasses.add(line);
+          }
+          break;
+        }
         case "--ignore-library-extends-program":
           {
             ignoreLibraryExtendsProgram = true;
@@ -325,9 +342,15 @@ public class R8Wrapper {
               "-keepattributes RuntimeInvisibleTypeAnnotations"),
           CLI_ORIGIN);
     }
-    if (!excludeClasses.isEmpty()) {
+    if (!includeClasses.isEmpty() || !excludeClasses.isEmpty()) {
       String includePatterns = "**";
-      String excludePatterns = String.join(",", excludeClasses);
+      if (!includeClasses.isEmpty()) {
+        includePatterns = String.join(",", includeClasses);
+      }
+      String excludePatterns = "";
+      if (!excludeClasses.isEmpty()) {
+        excludePatterns = String.join(",", excludeClasses);
+      }
       builder.enableExperimentalPartialShrinking(includePatterns, excludePatterns);
     }
     if (!pgRules.isEmpty()) {
