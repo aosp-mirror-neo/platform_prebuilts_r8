@@ -241,6 +241,9 @@ public class D8PackageBasedWrapper extends D8Wrapper {
 
   private Set<ProgramResource> getProgramResources(Set<String> packagesRecompiled) {
     Predicate<String> shouldReadEntry = className -> {
+      if (!ArchiveProgramResourceProvider.includeClassFileEntries(className)) {
+        return false;
+      }
       int lastIdx = className.lastIndexOf('/');
       String classPackage;
       if (lastIdx == -1) {
