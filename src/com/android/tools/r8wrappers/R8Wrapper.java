@@ -117,6 +117,8 @@ public class R8Wrapper {
     System.setProperty("com.android.tools.r8.keepanno.unkeepInvisibleAnnotationsInKeepForApi", "1");
     // Apply keep naming rules to R8-generated synthetics. See b/422530029.
     System.setProperty("com.android.tools.r8.synthesis.restrictrenaming", "1");
+    // Trace enum serialization, reducing need for global Enum.values() keep rules. See b/379313375.
+    System.setProperty("com.android.tools.r8.experimentalTraceAndroidEnumSerialization", "1");
 
     R8Wrapper wrapper = new R8Wrapper();
     String[] remainingArgs = wrapper.parseWrapperArguments(args);
