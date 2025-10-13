@@ -364,8 +364,8 @@ public class R8Wrapper {
     if (useCompatPg) {
       builder.setProguardCompatibility(useCompatPg);
     }
-    if (storeStoreFenceConstructorInlining) {
-      System.setProperty("com.android.tools.r8.enableConstructorInliningWithFinalFields", "1");
+    if (!storeStoreFenceConstructorInlining) {
+      System.setProperty("com.android.tools.r8.enableConstructorInliningWithFinalFields", "0");
     }
   }
 
