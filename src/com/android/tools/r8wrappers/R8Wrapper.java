@@ -371,8 +371,6 @@ public class R8Wrapper {
 
   /** Utility method to apply platform specific settings to both D8 and R8. */
   public static void applyCommonCompilerArguments(BaseCompilerCommand.Builder<?, ?> builder) {
-    // Enable throw block outlining.
-    System.setProperty("com.android.tools.r8.throwblockoutliner.enable", "1");
     // TODO(b/232073181): Remove this once platform flag is the default.
     if (!builder.getAndroidPlatformBuild()) {
       System.setProperty("com.android.tools.r8.disableApiModeling", "1");
