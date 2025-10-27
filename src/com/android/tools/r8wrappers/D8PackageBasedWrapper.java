@@ -23,6 +23,7 @@ import com.android.tools.r8.D8;
 import com.android.tools.r8.D8Command;
 import com.android.tools.r8.OutputMode;
 import com.android.tools.r8.ProgramResource;
+import com.android.tools.r8.ProgramResourceProvider;
 import com.android.tools.r8.ResourceException;
 
 import java.io.BufferedReader;
@@ -45,6 +46,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.*;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -219,10 +221,25 @@ public class D8PackageBasedWrapper extends D8Wrapper {
     flushDirFiles(packageOutputDir);
     builder.setOutput(Paths.get(packageOutputDir), OutputMode.DexIndexed);
     builder.addProgramResourceProvider(
-        () -> {
-          Predicate<ProgramResource> programResourcePredicate = r -> {
+        new ProgramResourceProvider() {
+
+          @Override
+          public Set<ProgramResource> getProgramResources() {
+            return programResources.stream().filter(this::include).collect(Collectors.toSet());
+          }
+
+          @Override
+          public void getProgramResources(Consumer<ProgramResource> consumer) {
+            for (ProgramResource programResource : programResources) {
+              if (include(programResource)) {
+                consumer.accept(programResource);
+              }
+            }
+          }
+
+          private boolean include(ProgramResource programResource) {
             // This is java descriptor based, e.g., Lcom/android/foo/MyClasss;
-            String str = r.getClassDescriptors().stream().findFirst().get();
+            String str = programResource.getClassDescriptors().stream().findFirst().get();
             int lastIdx = str.lastIndexOf('/');
             String classPackage;
             if (lastIdx == -1) {
@@ -231,9 +248,7 @@ public class D8PackageBasedWrapper extends D8Wrapper {
               classPackage = str.substring(1, lastIdx);
             }
             return currentPackage.equals(classPackage);
-          };
-          return programResources.stream().filter(programResourcePredicate)
-              .collect(Collectors.toSet());
+          }
         });
     builder.addLibraryResourceProvider(libraryProvider);
     builder.addClasspathResourceProvider(classpathProvider);
