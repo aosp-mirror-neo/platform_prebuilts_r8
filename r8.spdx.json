@@ -2,7 +2,7 @@
   "SPDXID" : "SPDXRef-DOCUMENT",
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
-    "created" : "2025-10-29T11:28:38Z",
+    "created" : "2025-11-03T09:19:07Z",
     "creators" : [ "Tool: spdx-gradle-plugin", "Organization: Google LLC" ]
   },
   "name" : "R8 Compiler Suite",
@@ -53,7 +53,7 @@
     "name" : "GNU LESSER GENERAL PUBLIC LICENSE 2.1",
     "seeAlsos" : [ "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html" ]
   } ],
-  "documentNamespace" : "https://spdx.google/29e1b43d-8bc0-5166-83b9-f8d3e592647d",
+  "documentNamespace" : "https://spdx.google/9cb56b18-02a3-5ffb-a4b4-bfe9035203af",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "copyrightText" : "NOASSERTION",
@@ -64,9 +64,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@92f09da3f3b5a24746231e9f3acc2024eea1da6a#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@d924b0ced5ba463f4e122a863f12bd416346ec77#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.0.20-dev"
+    "versionInfo" : "9.0.21-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
@@ -675,9 +675,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@92f09da3f3b5a24746231e9f3acc2024eea1da6a#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@d924b0ced5ba463f4e122a863f12bd416346ec77#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.0.20-dev"
+    "versionInfo" : "9.0.21-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd28",
     "copyrightText" : "NOASSERTION",
@@ -688,9 +688,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@92f09da3f3b5a24746231e9f3acc2024eea1da6a#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@d924b0ced5ba463f4e122a863f12bd416346ec77#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.0.20-dev"
+    "versionInfo" : "9.0.21-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd29",
     "copyrightText" : "NOASSERTION",
@@ -701,9 +701,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@92f09da3f3b5a24746231e9f3acc2024eea1da6a#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@d924b0ced5ba463f4e122a863f12bd416346ec77#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.0.20-dev"
+    "versionInfo" : "9.0.21-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd30",
     "checksums" : [ {
