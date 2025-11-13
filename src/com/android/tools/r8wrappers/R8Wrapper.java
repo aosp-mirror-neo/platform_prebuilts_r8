@@ -76,7 +76,10 @@ public class R8Wrapper {
             "Path to file containing name of classes that should not be compiled using R8."),
         new WrapperFlag(
             "--include <file>",
-            "Path to file containing name of classes that should be compiled using R8."));
+            "Path to file containing name of classes that should be compiled using R8."),
+        new WrapperFlag(
+            "--verbose-synthetic-names",
+            "Enable verbose synthetic names that use the `$$ExternalSynthetic` marker."));
   }
 
   private static String getUsageMessage() {
@@ -107,10 +110,6 @@ public class R8Wrapper {
     System.setProperty("com.android.tools.r8.disableEnqueuerDeferredTracing", "1");
     // Disable class merging across different files to improve attribution. See b/242881914.
     System.setProperty("com.android.tools.r8.enableSameFilePolicy", "1");
-    // Enable experimental -whyareyounotinlining config to aid debugging. See b/277389461.
-    System.setProperty("com.android.tools.r8.experimental.enablewhyareyounotinlining", "1");
-    // Allow use of -convertchecknotnull optimization. See b/280633711.
-    System.setProperty("com.android.tools.r8.experimental.enableconvertchecknotnull", "1");
     // Allow conditional keep rule application against library references. See b/386409781.
     System.setProperty("com.android.tools.r8.applyIfRulesToLibrary", "1");
     // Do not keep runtime invisible annotations with @KeepForApi. See b/399021897.
@@ -160,6 +159,7 @@ public class R8Wrapper {
   private boolean noImplicitDefaultInit = false;
   private boolean protectApiSurface = false;
   private boolean storeStoreFenceConstructorInlining = false;
+  private boolean verboseSyntheticNames = false;
   private final List<String> excludeClasses = new ArrayList<>();
   private final List<String> includeClasses = new ArrayList<>();
 
@@ -295,6 +295,11 @@ public class R8Wrapper {
             storeStoreFenceConstructorInlining = true;
             break;
           }
+        case "--verbose-synthetic-names":
+          {
+            verboseSyntheticNames = true;
+            break;
+          }
         default:
           {
             remainingArgs.add(arg);
@@ -306,6 +311,10 @@ public class R8Wrapper {
   }
 
   private void applyWrapperArguments(R8Command.Builder builder) {
+    builder
+        .setEnableVerboseSyntheticNames(verboseSyntheticNames)
+        .setProguardCompatibility(useCompatPg)
+        .setProtectApiSurface(protectApiSurface);
     diagnosticsHandler.setPrintInfoDiagnostics(printInfoDiagnostics);
     // Surface duplicate type warnings for optimized targets where duplicates are more dangerous.
     // TODO(b/222468116): Bump the level to ERROR for all optimized targets after resolving current
@@ -359,12 +368,6 @@ public class R8Wrapper {
     }
     if (!pgRules.isEmpty()) {
       builder.addProguardConfiguration(pgRules, CLI_ORIGIN);
-    }
-    if (protectApiSurface) {
-      builder.setProtectApiSurface(true);
-    }
-    if (useCompatPg) {
-      builder.setProguardCompatibility(useCompatPg);
     }
     if (!storeStoreFenceConstructorInlining) {
       System.setProperty("com.android.tools.r8.enableConstructorInliningWithFinalFields", "0");
