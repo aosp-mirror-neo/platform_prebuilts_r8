@@ -51,6 +51,7 @@ public class D8Wrapper {
   protected static final String PACKAGE_RSP = "--packages";
   protected static final String MODIFIED_PACKAGE_RSP = "--mod-packages";
   protected static final String PACKAGE_OUTPUT = "--package-output";
+  protected static final String VERBOSE_SYNTHETIC_NAMES_FLAG = "--verbose-synthetic-names";
 
   private static List<ParseFlagInfo> getAdditionalFlagsInfo() {
     return Arrays.asList(
@@ -65,7 +66,9 @@ public class D8Wrapper {
                 "List of modified present across all .class files in a jar, between this " +
                         "and previous iteration, for incremental dex.\n" +
                         "Should be passed as a rsp/text file containing packages separated by " +
-                        "whitespace."));
+                        "whitespace."),
+        new WrapperFlag(VERBOSE_SYNTHETIC_NAMES_FLAG,
+                "Enable verbose synthetic names that use the `$$ExternalSynthetic` marker."));
   }
 
   private static String getUsageMessage() {
@@ -136,6 +139,7 @@ public class D8Wrapper {
 
   protected WrapperDiagnosticsHandler diagnosticsHandler = new WrapperDiagnosticsHandler();
   protected boolean printInfoDiagnostics = false;
+  protected boolean verboseSyntheticNames = false;
   protected List<Path> noDexArchives = new ArrayList<>();
 
   public String[] parseWrapperArguments(String[] args) {
@@ -159,6 +163,10 @@ public class D8Wrapper {
           noDexArchives.add(path);
           break;
         }
+        case VERBOSE_SYNTHETIC_NAMES_FLAG: {
+          verboseSyntheticNames = true;
+          break;
+        }
         default: {
           remainingArgs.add(arg);
           break;
@@ -177,5 +185,6 @@ public class D8Wrapper {
               path,
               ArchiveProgramResourceProvider::includeClassFileEntries));
     }
+    builder.setEnableVerboseSyntheticNames(verboseSyntheticNames);
   }
 }

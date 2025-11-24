@@ -252,6 +252,7 @@ public class D8PackageBasedWrapper extends D8Wrapper {
         });
     builder.addLibraryResourceProvider(libraryProvider);
     builder.addClasspathResourceProvider(classpathProvider);
+    builder.setEnableVerboseSyntheticNames(true);
   }
 
   private Set<ProgramResource> getProgramResources(Set<String> packagesRecompiled) {
