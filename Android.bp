@@ -95,6 +95,12 @@ java_binary_host {
 }
 
 java_binary_host {
+    name: "process-keep-rules",
+    main_class: "com.android.tools.r8wrappers.processkeeprules.ProcessKeepRulesWrapper",
+    static_libs: ["r8lib"],
+}
+
+java_binary_host {
     name: "tracereferences",
     main_class: "com.android.tools.r8.tracereferences.TraceReferences",
     static_libs: ["r8lib"],
