@@ -314,9 +314,6 @@ public class R8Wrapper {
     builder
         .setEnableVerboseSyntheticNames(verboseSyntheticNames)
         .setProguardCompatibility(useCompatPg)
-        // TODO(b/459441752): Consider configuring -processkotlinnullchecks in the default
-        //  keep rules instead.
-        .addProguardConfiguration(List.of("-processkotlinnullchecks keep"), CLI_ORIGIN)
         .setProtectApiSurface(protectApiSurface);
     diagnosticsHandler.setPrintInfoDiagnostics(printInfoDiagnostics);
     // Surface duplicate type warnings for optimized targets where duplicates are more dangerous.
