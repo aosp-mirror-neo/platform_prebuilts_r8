@@ -105,6 +105,10 @@ public class D8Wrapper {
 
   public static void main(String[] args)
       throws CompilationFailedException, IOException, ExecutionException, InterruptedException {
+    // Don't generate the com.android.tools.r8.annotations.LambdaMethod annotation.
+    // See b/465356638.
+    System.setProperty("com.android.tools.r8.disableLambdaMethodAnnotations", "1");
+
     boolean packageBasedCompilation = isPackageBasedCompilation(args);
     D8Wrapper wrapper = packageBasedCompilation ? new D8PackageBasedWrapper() : new D8Wrapper();
     String[] remainingArgs = wrapper.parseWrapperArguments(args);
