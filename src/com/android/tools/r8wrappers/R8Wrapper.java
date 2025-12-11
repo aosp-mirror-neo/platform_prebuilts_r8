@@ -118,7 +118,9 @@ public class R8Wrapper {
     System.setProperty("com.android.tools.r8.synthesis.restrictrenaming", "1");
     // Trace enum serialization, reducing need for global Enum.values() keep rules. See b/379313375.
     System.setProperty("com.android.tools.r8.experimentalTraceAndroidEnumSerialization", "1");
-
+    // Exclude superclasses of excluded classes in R8 partial.
+    // TODO(b/418131194): Remove flag when stable.
+    System.setProperty("com.android.tools.r8.partial.excludeSuperclassesOfExcludedClasses", "1");
     R8Wrapper wrapper = new R8Wrapper();
     String[] remainingArgs = wrapper.parseWrapperArguments(args);
     if (!wrapper.useCompatPg && !wrapper.noImplicitDefaultInit) {
