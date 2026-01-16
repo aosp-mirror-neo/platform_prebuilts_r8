@@ -392,6 +392,8 @@ public class R8Wrapper {
       BaseCompilerCommand.Builder<?, ?> builder, boolean verboseSyntheticNames) {
     // Enable throw block outlining.
     System.setProperty("com.android.tools.r8.outliner.enable", "1");
+    // Improve class to DEX distribution.
+    System.setProperty("com.android.tools.r8.dex.refinementpasses", "0");
     // TODO(b/232073181): Remove this once platform flag is the default.
     if (!builder.getAndroidPlatformBuild()) {
       System.setProperty("com.android.tools.r8.disableApiModeling", "1");
