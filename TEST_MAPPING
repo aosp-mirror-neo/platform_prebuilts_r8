@@ -1,7 +1,6 @@
 {
   "imports": [
-    {
-      "path": "art"
-    }
+    { "path": "art" },
+    { "path": "libcore" }
   ]
 }
