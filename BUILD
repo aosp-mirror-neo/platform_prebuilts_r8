@@ -44,6 +44,7 @@ jvm_import(
         "//prebuilts/tools/linux-x86_64/art:__pkg__",
         "//tools/adt/idea/android:__pkg__",
         "//tools/adt/idea/android-kotlin:__pkg__",
+        "//tools/adt/idea/apkanalyzer:__pkg__",
         "//tools/adt/idea/debuggers:__pkg__",
         "//tools/adt/idea/ij-debugger-tests:__pkg__",
         "//tools/adt/idea/logcat:__pkg__",
