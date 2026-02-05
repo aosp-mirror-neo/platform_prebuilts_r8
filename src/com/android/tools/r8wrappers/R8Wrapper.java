@@ -316,6 +316,7 @@ public class R8Wrapper {
     builder
         .setEnableVerboseSyntheticNames(verboseSyntheticNames)
         .setProguardCompatibility(useCompatPg)
+        .addProguardConfiguration(List.of("-dontrepackage"), CLI_ORIGIN)
         // TODO(b/459441752): Consider configuring -processkotlinnullchecks in the default
         //  keep rules instead.
         .addProguardConfiguration(List.of("-processkotlinnullchecks keep"), CLI_ORIGIN)
