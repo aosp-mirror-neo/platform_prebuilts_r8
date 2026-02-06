@@ -430,6 +430,11 @@ public class RetraceWrapper {
     if (atIndex < 0) {
       return null;
     }
+    // Only match "at " if preceded by a tab, space, or newline. The convention is generally
+    // a tab, but we're intentionally permissive of any post-processing that may happen.
+    if (atIndex > 0 && !Character.isWhitespace(line.charAt(atIndex - 1))) {
+      return null;
+    }
     int parenStartIndex = line.indexOf('(', atIndex);
     if (parenStartIndex < 0) {
       return null;
