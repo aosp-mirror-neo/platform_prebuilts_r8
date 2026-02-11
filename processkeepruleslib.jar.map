@@ -1,10 +1,10 @@
 # compiler: R8
-# compiler_version: 9.1.29-dev
+# compiler_version: 9.1.31
 # compiler_hash: engineering
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: 9.1.29-dev
-# pg_map_hash: SHA-256 f563be681ee1494c51fd08e6055fa8d59e1465c144760a127cf33c8ba28617a1
+# pg_map_id: 9.1.31
+# pg_map_hash: SHA-256 883719b224348d492517e625fe2710955f80251f66dbb314bc3f43a9d84e3f19
 com.android.tools.r8.CompilationFailedException -> com.android.tools.r8.CompilationFailedException:
 # {"id":"sourceFile","fileName":"CompilationFailedException.java"}
     boolean cancelled -> a
@@ -66,8 +66,7 @@ com.android.tools.r8.Version -> com.android.tools.r8.Version:
     1:1:int getPatchVersion():70:70 -> getPatchVersion
     2:4:int getPatchVersion(java.lang.String):78:80 -> getPatchVersion
     2:4:int getPatchVersion():70 -> getPatchVersion
-    1:1:java.lang.String getPreReleaseString(java.lang.String):99:99 -> getPreReleaseString
-    1:1:java.lang.String getPreReleaseString():90 -> getPreReleaseString
+    1:1:java.lang.String getPreReleaseString():90:90 -> getPreReleaseString
     1:1:java.lang.String getVersionString():25:25 -> getVersionString
     1:1:boolean isDevelopmentVersion():110:110 -> isDevelopmentVersion
 com.android.tools.r8.com.google.common.base.Function -> com.android.tools.r8.processkeeprules.internal.d2:
