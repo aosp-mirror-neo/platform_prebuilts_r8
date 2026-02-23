@@ -2,7 +2,7 @@
   "SPDXID" : "SPDXRef-DOCUMENT",
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
-    "created" : "2026-02-11T14:18:51Z",
+    "created" : "2026-02-20T15:10:57Z",
     "creators" : [ "Tool: spdx-gradle-plugin", "Organization: Google LLC" ]
   },
   "name" : "R8 Compiler Suite",
@@ -53,7 +53,7 @@
     "name" : "GNU LESSER GENERAL PUBLIC LICENSE 2.1",
     "seeAlsos" : [ "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html" ]
   } ],
-  "documentNamespace" : "https://spdx.google/bf077d2e-fae2-5a75-9f17-52f79fafffd3",
+  "documentNamespace" : "https://spdx.google/da88aba6-9581-52ee-9101-f072a76f7357",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "copyrightText" : "NOASSERTION",
@@ -64,9 +64,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@60751e845e0a27ed4dd4f3d50e53c9f196fa30bb#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@e2b9bb4e4539b7de39f8dcb1d74d3b6f39bb26f7#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.1.31"
+    "versionInfo" : "9.2.3-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
@@ -646,25 +646,25 @@
     "SPDXID" : "SPDXRef-gnrtd26",
     "checksums" : [ {
       "algorithm" : "SHA1",
-      "checksumValue" : "4b57f1b1b9e281231c3fcfc039ce3021e29ff570"
+      "checksumValue" : "ec5069e07936941fa67ab8f78242fb91262c3dd9"
     }, {
       "algorithm" : "SHA256",
-      "checksumValue" : "440642e3b526663d1c15b4a2071c2696f2a25f031332ac3eb43f63969d819b3d"
+      "checksumValue" : "cb9e00d6e3d4b1305f3fdc147490ce347bfe8c05dc821a433b23b2ff28749bb1"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.19.3/protobuf-java-3.19.3.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/4.33.5/protobuf-java-4.33.5.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/com.google.protobuf/protobuf-java@3.19.3?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/com.google.protobuf/protobuf-java@4.33.5?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "BSD-3-Clause",
     "licenseInfoFromFiles" : [ ],
-    "name" : "com.google.protobuf:protobuf-java:3.19.3",
+    "name" : "com.google.protobuf:protobuf-java:4.33.5",
     "supplier" : "Organization: Google",
-    "versionInfo" : "3.19.3"
+    "versionInfo" : "4.33.5"
   }, {
     "SPDXID" : "SPDXRef-gnrtd27",
     "checksums" : [ {
@@ -721,9 +721,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@60751e845e0a27ed4dd4f3d50e53c9f196fa30bb#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@e2b9bb4e4539b7de39f8dcb1d74d3b6f39bb26f7#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.1.31"
+    "versionInfo" : "9.2.3-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd30",
     "copyrightText" : "NOASSERTION",
@@ -734,9 +734,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@60751e845e0a27ed4dd4f3d50e53c9f196fa30bb#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@e2b9bb4e4539b7de39f8dcb1d74d3b6f39bb26f7#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.1.31"
+    "versionInfo" : "9.2.3-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd31",
     "copyrightText" : "NOASSERTION",
@@ -747,9 +747,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@60751e845e0a27ed4dd4f3d50e53c9f196fa30bb#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@e2b9bb4e4539b7de39f8dcb1d74d3b6f39bb26f7#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.1.31"
+    "versionInfo" : "9.2.3-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd32",
     "copyrightText" : "NOASSERTION",
@@ -760,55 +760,55 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "r8",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@60751e845e0a27ed4dd4f3d50e53c9f196fa30bb#r8[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@e2b9bb4e4539b7de39f8dcb1d74d3b6f39bb26f7#r8[:]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.1.31"
+    "versionInfo" : "9.2.3-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd33",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "11bcf9d11dd46b15676f69fb19b40a242ab573aedeee0da67c10b771b5a51f98"
+      "checksumValue" : "2335bab7fd8269ee98d3843410c4a5553d31dd71f9a22f49b21a676d3139c882"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "00962acc39c59270f5ac7308d58d567d82258aac"
+      "checksumValue" : "acf00ea97102064130c6fce33ed18eef59bc692e"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://maven.google.com/com/android/tools/build/aapt2-proto/8.5.0-alpha04-11315950/aapt2-proto-8.5.0-alpha04-11315950.jar",
+    "downloadLocation" : "https://maven.google.com/com/android/tools/build/aapt2-proto/9.1.0-alpha09-14792394/aapt2-proto-9.1.0-alpha09-14792394.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/com.android.tools.build/aapt2-proto@8.5.0-alpha04-11315950?repository_url=maven.google.com",
+      "referenceLocator" : "pkg:maven/com.android.tools.build/aapt2-proto@9.1.0-alpha09-14792394?repository_url=maven.google.com",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "com.android.tools.build:aapt2-proto:8.5.0-alpha04-11315950",
+    "name" : "com.android.tools.build:aapt2-proto:9.1.0-alpha09-14792394",
     "supplier" : "Person: The Android Open Source Project",
-    "versionInfo" : "8.5.0-alpha04-11315950"
+    "versionInfo" : "9.1.0-alpha09-14792394"
   }, {
     "SPDXID" : "SPDXRef-gnrtd34",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "59d388ea6a2d2d76ae8efff7fd4d0c60c6f0f464c3d3ab9be8e5add092975708"
+      "checksumValue" : "8540247fad9e06baefa8fb45eb313802d019f485f14300e0f9d6b556ed88e753"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "fdee98b8f6abab73f146a4edb4c09e56f8278d03"
+      "checksumValue" : "5ae5c9ec39930ae9b5a61b32b93288818ec05ec1"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.22.3/protobuf-java-3.22.3.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.25.5/protobuf-java-3.25.5.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/com.google.protobuf/protobuf-java@3.22.3?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/com.google.protobuf/protobuf-java@3.25.5?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "BSD-3-Clause",
     "licenseInfoFromFiles" : [ ],
-    "name" : "com.google.protobuf:protobuf-java:3.22.3",
+    "name" : "com.google.protobuf:protobuf-java:3.25.5",
     "supplier" : "Organization: Google",
-    "versionInfo" : "3.22.3"
+    "versionInfo" : "3.25.5"
   }, {
     "SPDXID" : "SPDXRef-gnrtd35",
     "checksums" : [ {
