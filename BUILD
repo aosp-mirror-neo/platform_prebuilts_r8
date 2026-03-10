@@ -59,6 +59,13 @@ jvm_import(
 )
 
 java_binary(
+    name = "r8_binary",
+    main_class = "com.android.tools.r8.R8",
+    visibility = ["//visibility:public"],
+    runtime_deps = [":r8"],
+)
+
+java_binary(
     name = "d8",
     main_class = "com.android.tools.r8.D8",
     visibility = ["//visibility:public"],
