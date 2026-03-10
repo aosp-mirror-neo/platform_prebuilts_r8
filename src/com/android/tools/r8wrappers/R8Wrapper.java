@@ -57,6 +57,13 @@ public class R8Wrapper {
         }
       };
 
+  // R8 defaults to using just `$` as the minimized synthetic separator. However, this can
+  // alias non-R8 synthetic ordinals prefixed with `$`. To preserve the ordinal sequences of
+  // existing profiles generated with verbose synthetic names, preserve the `$$` separator.
+  // NOTE: This should be kept in sync with any related references in the `/art/` repo.
+  // Unfortunately `IfChange` lint rules don't support cross project references.
+  private static final String MINIMIZED_SYNTHETIC_SEPARATOR = "$$";
+
   private static List<ParseFlagInfo> getAdditionalFlagsInfo() {
     return Arrays.asList(
         new WrapperFlag("--deps-file <file>", "Write input dependencies to <file>."),
@@ -141,7 +148,7 @@ public class R8Wrapper {
       return;
     }
     wrapper.applyWrapperArguments(builder);
-    applyCommonCompilerArguments(builder);
+    applyCommonCompilerArguments(builder, wrapper.verboseSyntheticNames);
     builder.setEnableExperimentalKeepAnnotations(true);
     R8.run(builder.build());
   }
@@ -381,12 +388,17 @@ public class R8Wrapper {
   }
 
   /** Utility method to apply platform specific settings to both D8 and R8. */
-  public static void applyCommonCompilerArguments(BaseCompilerCommand.Builder<?, ?> builder) {
+  public static void applyCommonCompilerArguments(
+      BaseCompilerCommand.Builder<?, ?> builder, boolean verboseSyntheticNames) {
     // Enable throw block outlining.
     System.setProperty("com.android.tools.r8.outliner.enable", "1");
     // TODO(b/232073181): Remove this once platform flag is the default.
     if (!builder.getAndroidPlatformBuild()) {
       System.setProperty("com.android.tools.r8.disableApiModeling", "1");
+    }
+    if (!verboseSyntheticNames) {
+      System.setProperty(
+          "com.android.tools.r8.synthesis.syntheticseparator", MINIMIZED_SYNTHETIC_SEPARATOR);
     }
   }
 
