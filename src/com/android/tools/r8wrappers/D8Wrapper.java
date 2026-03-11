@@ -123,7 +123,7 @@ public class D8Wrapper {
     D8Command.Builder builder = D8Command.parse(
         remainingArgs, CLI_ORIGIN, diagnosticsHandler);
     applyWrapperArguments(builder);
-    R8Wrapper.applyCommonCompilerArguments(builder);
+    R8Wrapper.applyCommonCompilerArguments(builder, verboseSyntheticNames);
     D8.run(builder.build());
   }
 

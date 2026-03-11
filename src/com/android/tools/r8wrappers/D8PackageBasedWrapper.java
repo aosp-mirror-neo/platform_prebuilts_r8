@@ -114,6 +114,7 @@ public class D8PackageBasedWrapper extends D8Wrapper {
         dexMergeShardCount, minApi);
   }
 
+  @Override
   public String[] parseWrapperArguments(String[] args) {
     List<String> remainingArgs = new ArrayList<>();
     for (int i = 0; i < args.length; i++) {
@@ -196,7 +197,7 @@ public class D8PackageBasedWrapper extends D8Wrapper {
         D8Command.Builder builder = D8Command.parse(remainingArgs, CLI_ORIGIN, diagnosticsHandler);
         applyWrapperArguments(builder, pack, programResources, basePackageDirectory,
             libraryProvider, classpathProvider);
-        R8Wrapper.applyCommonCompilerArguments(builder);
+        R8Wrapper.applyCommonCompilerArguments(builder, verboseSyntheticNames);
         try {
           D8Command command = builder.build();
           D8.run(command);
@@ -252,7 +253,7 @@ public class D8PackageBasedWrapper extends D8Wrapper {
         });
     builder.addLibraryResourceProvider(libraryProvider);
     builder.addClasspathResourceProvider(classpathProvider);
-    builder.setEnableVerboseSyntheticNames(true);
+    builder.setEnableVerboseSyntheticNames(verboseSyntheticNames);
   }
 
   private Set<ProgramResource> getProgramResources(Set<String> packagesRecompiled) {
