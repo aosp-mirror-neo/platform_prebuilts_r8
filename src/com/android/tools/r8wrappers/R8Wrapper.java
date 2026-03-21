@@ -128,6 +128,8 @@ public class R8Wrapper {
     // Exclude superclasses of excluded classes in R8 partial.
     // TODO(b/418131194): Remove flag when stable.
     System.setProperty("com.android.tools.r8.partial.excludeSuperclassesOfExcludedClasses", "1");
+    // TODO(b/492169125): Reland separately to better track impact on size/memory.
+    System.setProperty("com.android.tools.r8.canMatchRuntimeInvisibleAnnotationsWithWildcards", "1");
     R8Wrapper wrapper = new R8Wrapper();
     String[] remainingArgs = wrapper.parseWrapperArguments(args);
     if (!wrapper.useCompatPg && !wrapper.noImplicitDefaultInit) {
