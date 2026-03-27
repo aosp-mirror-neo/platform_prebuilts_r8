@@ -2,7 +2,7 @@
   "SPDXID" : "SPDXRef-DOCUMENT",
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
-    "created" : "2026-03-18T16:04:34Z",
+    "created" : "2026-03-26T16:39:39Z",
     "creators" : [ "Tool: spdx-gradle-plugin", "Organization: Google LLC" ]
   },
   "name" : "R8 Compiler Suite",
@@ -18,7 +18,7 @@
     "name" : "Apache License, Version 2.0",
     "seeAlsos" : [ "http://www.apache.org/licenses/LICENSE-2.0.html" ]
   } ],
-  "documentNamespace" : "https://spdx.google/f457dc5f-fd96-50b6-bba0-a1e09d4fbeef",
+  "documentNamespace" : "https://spdx.google/556c2b6c-c0f0-58df-bbf6-217392125ce8",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "copyrightText" : "NOASSERTION",
@@ -29,9 +29,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "dist",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@10a100637a34c3744fa877edbc9f47f9665eee94#dist[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@3bec476bbff78407704bff11caa40ea817fcb8fa#dist[:dist]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.2.11-dev"
+    "versionInfo" : "9.2.12-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
