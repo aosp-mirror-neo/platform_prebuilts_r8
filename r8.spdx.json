@@ -2,7 +2,7 @@
   "SPDXID" : "SPDXRef-DOCUMENT",
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
-    "created" : "2026-05-04T10:39:17Z",
+    "created" : "2026-05-06T13:53:41Z",
     "creators" : [ "Tool: spdx-gradle-plugin", "Organization: Google LLC" ]
   },
   "name" : "R8 Compiler Suite",
@@ -18,7 +18,7 @@
     "name" : "Apache License, Version 2.0",
     "seeAlsos" : [ "http://www.apache.org/licenses/LICENSE-2.0.html" ]
   } ],
-  "documentNamespace" : "https://spdx.google/34525df3-bb40-5c35-8c52-3d433e51d1fb",
+  "documentNamespace" : "https://spdx.google/23c014fb-1b23-5730-90dd-ce14f05d2ffe",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "copyrightText" : "NOASSERTION",
@@ -29,9 +29,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "dist",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@bb0088c179b19ea330eb7fc18e5e7554122d038a#dist[:dist]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@9a19c2fb2c5485e7d544467c90a3c881e38306ce#dist[:dist]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.3.4-dev"
+    "versionInfo" : "9.3.5-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
@@ -657,25 +657,25 @@
     "SPDXID" : "SPDXRef-gnrtd28",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "f31cc53f105a7e48c093683bbd5437561d1233920513774b470805641bedbc09"
+      "checksumValue" : "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "618b539767b4899b4660a83006e052b63f1db551"
+      "checksumValue" : "fa374a986e128314c3db00a20aae55f72a258511"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.0.21/kotlin-stdlib-2.0.21.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.0.21?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.21?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "org.jetbrains.kotlin:kotlin-stdlib:2.0.21",
+    "name" : "org.jetbrains.kotlin:kotlin-stdlib:2.2.21",
     "supplier" : "Organization: JetBrains",
-    "versionInfo" : "2.0.21"
+    "versionInfo" : "2.2.21"
   }, {
     "SPDXID" : "SPDXRef-gnrtd29",
     "checksums" : [ {
