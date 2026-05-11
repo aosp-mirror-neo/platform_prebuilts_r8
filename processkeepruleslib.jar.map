@@ -1,9 +1,9 @@
 # compiler: R8
-# compiler_version: 9.3.6-dev
+# compiler_version: 9.3.7-dev
 # compiler_hash: engineering
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: 9.3.6-dev
+# pg_map_id: 9.3.7-dev
 # pg_map_hash: SHA-256 db090c55f7c591803bbf50e80484870d721c8743835337e894fb3b369766087e
 com.android.tools.r8.CompilationFailedException -> com.android.tools.r8.CompilationFailedException:
 # {"id":"sourceFile","fileName":"CompilationFailedException.java"}
