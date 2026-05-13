@@ -2,7 +2,7 @@
   "SPDXID" : "SPDXRef-DOCUMENT",
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
-    "created" : "2026-03-18T16:04:34Z",
+    "created" : "2026-05-11T12:21:25Z",
     "creators" : [ "Tool: spdx-gradle-plugin", "Organization: Google LLC" ]
   },
   "name" : "R8 Compiler Suite",
@@ -18,7 +18,7 @@
     "name" : "Apache License, Version 2.0",
     "seeAlsos" : [ "http://www.apache.org/licenses/LICENSE-2.0.html" ]
   } ],
-  "documentNamespace" : "https://spdx.google/f457dc5f-fd96-50b6-bba0-a1e09d4fbeef",
+  "documentNamespace" : "https://spdx.google/4b3d97c0-9059-52c8-9afb-6e269747ad26",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "copyrightText" : "NOASSERTION",
@@ -29,63 +29,17 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "dist",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@10a100637a34c3744fa877edbc9f47f9665eee94#dist[:]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@3077ef2e4ea041192b01744b2f3fe076abe963d6#dist[:dist]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.2.11-dev"
+    "versionInfo" : "9.3.7-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "74e128077ba26f4f0ca6c5490ef86f8e931f811cd7aadf182830753a108aace9"
+      "checksumValue" : "f61662c6d3a2f8ef5bd34362a02d877772c39f393cd394feb259dfaf7f4d8437"
     }, {
-      "algorithm" : "SHA1",
-      "checksumValue" : "91ffd99a7d57b9ea57957bf765bd6aa6e2ea5d7a"
-    } ],
-    "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://androidx.dev/snapshots/builds/14756173/artifacts/repository/androidx/collection/collection-jvm/1.6.0-SNAPSHOT/collection-jvm-1.6.0-SNAPSHOT.jar",
-    "externalRefs" : [ {
-      "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/androidx.collection/collection-jvm@1.6.0-SNAPSHOT?repository_url=androidx.dev%2Fsnapshots%2Fbuilds%2F14756173%2Fartifacts%2Frepository",
-      "referenceType" : "purl"
-    } ],
-    "filesAnalyzed" : false,
-    "licenseConcluded" : "NOASSERTION",
-    "licenseDeclared" : "Apache-2.0",
-    "licenseInfoFromFiles" : [ ],
-    "name" : "androidx.collection:collection-jvm:1.6.0-SNAPSHOT",
-    "supplier" : "Organization: The Android Open Source Project",
-    "versionInfo" : "1.6.0-SNAPSHOT"
-  }, {
-    "SPDXID" : "SPDXRef-gnrtd2",
-    "checksums" : [ {
-      "algorithm" : "SHA256",
-      "checksumValue" : "1e343917ebf27ba96fe4dc52b1cad7fd32b738fbc6355bb6cd5b3b305d7212d0"
-    }, {
-      "algorithm" : "SHA1",
-      "checksumValue" : "b17951747e38bf3986a24431b9ba0d039958aa5f"
-    } ],
-    "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://maven.google.com/androidx/annotation/annotation-jvm/1.9.1/annotation-jvm-1.9.1.jar",
-    "externalRefs" : [ {
-      "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/androidx.annotation/annotation-jvm@1.9.1?repository_url=maven.google.com",
-      "referenceType" : "purl"
-    } ],
-    "filesAnalyzed" : false,
-    "licenseConcluded" : "NOASSERTION",
-    "licenseDeclared" : "Apache-2.0",
-    "licenseInfoFromFiles" : [ ],
-    "name" : "androidx.annotation:annotation-jvm:1.9.1",
-    "supplier" : "Organization: The Android Open Source Project",
-    "versionInfo" : "1.9.1"
-  }, {
-    "SPDXID" : "SPDXRef-gnrtd3",
-    "checksums" : [ {
       "algorithm" : "SHA1",
       "checksumValue" : "8b80e2f80a3b7daa99c16017f91d4c72cd8b31a6"
-    }, {
-      "algorithm" : "SHA256",
-      "checksumValue" : "f61662c6d3a2f8ef5bd34362a02d877772c39f393cd394feb259dfaf7f4d8437"
     } ],
     "copyrightText" : "NOASSERTION",
     "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.3.10/kotlin-stdlib-2.3.10.jar",
@@ -102,7 +56,7 @@
     "supplier" : "Organization: JetBrains",
     "versionInfo" : "2.3.10"
   }, {
-    "SPDXID" : "SPDXRef-gnrtd4",
+    "SPDXID" : "SPDXRef-gnrtd2",
     "checksums" : [ {
       "algorithm" : "SHA256",
       "checksumValue" : "7b0f19724082cbfcbc66e5abea2b9bc92cf08a1ea11e191933ed43801eb3cd05"
@@ -124,6 +78,52 @@
     "name" : "org.jetbrains:annotations:23.0.0",
     "supplier" : "Organization: JetBrains",
     "versionInfo" : "23.0.0"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd3",
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "f53ad8c314e5fb7acad45fab5ee00ee3e8c5ca07"
+    }, {
+      "algorithm" : "SHA256",
+      "checksumValue" : "839fcec147704611a222159fa84e3e062f68eee80caa549ddd1222d5210a13df"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "https://maven.google.com/androidx/collection/collection-jvm/1.6.0/collection-jvm-1.6.0.jar",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/androidx.collection/collection-jvm@1.6.0?repository_url=maven.google.com",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "Apache-2.0",
+    "licenseInfoFromFiles" : [ ],
+    "name" : "androidx.collection:collection-jvm:1.6.0",
+    "supplier" : "Organization: The Android Open Source Project",
+    "versionInfo" : "1.6.0"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd4",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "1e343917ebf27ba96fe4dc52b1cad7fd32b738fbc6355bb6cd5b3b305d7212d0"
+    }, {
+      "algorithm" : "SHA1",
+      "checksumValue" : "b17951747e38bf3986a24431b9ba0d039958aa5f"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "https://maven.google.com/androidx/annotation/annotation-jvm/1.9.1/annotation-jvm-1.9.1.jar",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/androidx.annotation/annotation-jvm@1.9.1?repository_url=maven.google.com",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "Apache-2.0",
+    "licenseInfoFromFiles" : [ ],
+    "name" : "androidx.annotation:annotation-jvm:1.9.1",
+    "supplier" : "Organization: The Android Open Source Project",
+    "versionInfo" : "1.9.1"
   }, {
     "SPDXID" : "SPDXRef-gnrtd5",
     "checksums" : [ {
@@ -151,25 +151,25 @@
     "SPDXID" : "SPDXRef-gnrtd6",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "6b3d2345ef31a1adbd098b7fa0d3f64c6fbda5c62b9cb6a335544dafc499524a"
+      "checksumValue" : "c70ca9962b4c11523f2166fe9ea5fa52665a0666f6402aaafe33812689c9bb41"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "bf2c4bc1df2912a6c0b6ffbfedacd7aca6ea717c"
+      "checksumValue" : "48105570b4c64ff0b3f858e5b9fd567ae5a03c96"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://androidx.dev/snapshots/builds/14756173/artifacts/repository/androidx/tracing/tracing-desktop/2.0.0-SNAPSHOT/tracing-desktop-2.0.0-SNAPSHOT.jar",
+    "downloadLocation" : "https://maven.google.com/androidx/tracing/tracing-desktop/2.0.0-alpha05/tracing-desktop-2.0.0-alpha05.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/androidx.tracing/tracing-desktop@2.0.0-SNAPSHOT?repository_url=androidx.dev%2Fsnapshots%2Fbuilds%2F14756173%2Fartifacts%2Frepository",
+      "referenceLocator" : "pkg:maven/androidx.tracing/tracing-desktop@2.0.0-alpha05?repository_url=maven.google.com",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "androidx.tracing:tracing-desktop:2.0.0-SNAPSHOT",
+    "name" : "androidx.tracing:tracing-desktop:2.0.0-alpha05",
     "supplier" : "Organization: The Android Open Source Project",
-    "versionInfo" : "2.0.0-SNAPSHOT"
+    "versionInfo" : "2.0.0-alpha05"
   }, {
     "SPDXID" : "SPDXRef-gnrtd7",
     "checksums" : [ {
@@ -197,71 +197,71 @@
     "SPDXID" : "SPDXRef-gnrtd8",
     "checksums" : [ {
       "algorithm" : "SHA1",
-      "checksumValue" : "7ff253a4b8d024d7e763fbffe907be61d9e62d36"
+      "checksumValue" : "b80c4239d384d5efcad94dde670807588ba0f45a"
     }, {
       "algorithm" : "SHA256",
-      "checksumValue" : "e291319ef05fe6c3c8192b622ed7fe1d0f18d597dd430a787a537ed492a48056"
+      "checksumValue" : "e6062619d7ea9280d47e937222fca0d071d3e53999a7ca04e430c0a974903e63"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://androidx.dev/snapshots/builds/14756173/artifacts/repository/androidx/tracing/tracing-wire-desktop/2.0.0-SNAPSHOT/tracing-wire-desktop-2.0.0-SNAPSHOT.jar",
+    "downloadLocation" : "https://maven.google.com/androidx/tracing/tracing-wire-desktop/2.0.0-alpha05/tracing-wire-desktop-2.0.0-alpha05.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/androidx.tracing/tracing-wire-desktop@2.0.0-SNAPSHOT?repository_url=androidx.dev%2Fsnapshots%2Fbuilds%2F14756173%2Fartifacts%2Frepository",
+      "referenceLocator" : "pkg:maven/androidx.tracing/tracing-wire-desktop@2.0.0-alpha05?repository_url=maven.google.com",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "androidx.tracing:tracing-wire-desktop:2.0.0-SNAPSHOT",
+    "name" : "androidx.tracing:tracing-wire-desktop:2.0.0-alpha05",
     "supplier" : "Organization: The Android Open Source Project",
-    "versionInfo" : "2.0.0-SNAPSHOT"
+    "versionInfo" : "2.0.0-alpha05"
   }, {
     "SPDXID" : "SPDXRef-gnrtd9",
     "checksums" : [ {
       "algorithm" : "SHA1",
-      "checksumValue" : "031952cdbcb5c33794e0ad4d4de25d2349a322b4"
+      "checksumValue" : "e14279dd434f536ce2d73eda57e7009728e0dd4a"
     }, {
       "algorithm" : "SHA256",
-      "checksumValue" : "4a99d8a8b51615d06bfd5acea0900f130f3ec684005d487c94c412fe2d907a34"
+      "checksumValue" : "ca10c9f2b016b9b1027d8b20a6f06ea24505bd67657204e2094e4f6d8a5133df"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/com/squareup/wire/wire-runtime-jvm/5.4.0/wire-runtime-jvm-5.4.0.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/com/squareup/wire/wire-runtime-jvm/6.0.0/wire-runtime-jvm-6.0.0.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/com.squareup.wire/wire-runtime-jvm@5.4.0?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/com.squareup.wire/wire-runtime-jvm@6.0.0?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "com.squareup.wire:wire-runtime-jvm:5.4.0",
+    "name" : "com.squareup.wire:wire-runtime-jvm:6.0.0",
     "supplier" : "Person: CashApp",
-    "versionInfo" : "5.4.0"
+    "versionInfo" : "6.0.0"
   }, {
     "SPDXID" : "SPDXRef-gnrtd10",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "fe6fe91378f9bfa7b08c3864828ce418005cf28acca12e8847eb65c565c37500"
+      "checksumValue" : "3b13dcc3e1573047c2d507fc4f7fcb0bb0cbcd9d395da21d20e09406e2cd6a73"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "79696e3f4ff05d41ba2b3dc68adb5808a2e5dc53"
+      "checksumValue" : "a12d684ec0df9541b3869ae60a4a5257fd3613df"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/com/squareup/okio/okio-jvm/3.9.1/okio-jvm-3.9.1.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/com/squareup/okio/okio-jvm/3.17.0/okio-jvm-3.17.0.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/com.squareup.okio/okio-jvm@3.9.1?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/com.squareup.okio/okio-jvm@3.17.0?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "com.squareup.okio:okio-jvm:3.9.1",
+    "name" : "com.squareup.okio:okio-jvm:3.17.0",
     "supplier" : "Person: Square, Inc.",
-    "versionInfo" : "3.9.1"
+    "versionInfo" : "3.17.0"
   }, {
     "SPDXID" : "SPDXRef-gnrtd11",
     "checksums" : [ {
@@ -657,25 +657,48 @@
     "SPDXID" : "SPDXRef-gnrtd28",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "3ad2fcad0c09ddc0922debab4444d612144b7b465b75a8bb7587e20ddfafd799"
+      "checksumValue" : "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "669e1d35e4ca1797f9ddb2830dd6c36c0ca531e4"
+      "checksumValue" : "fa374a986e128314c3db00a20aae55f72a258511"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-reflect/2.0.21/kotlin-reflect-2.0.21.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@2.0.21?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.21?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "org.jetbrains.kotlin:kotlin-reflect:2.0.21",
+    "name" : "org.jetbrains.kotlin:kotlin-stdlib:2.2.21",
     "supplier" : "Organization: JetBrains",
-    "versionInfo" : "2.0.21"
+    "versionInfo" : "2.2.21"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd29",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+    }, {
+      "algorithm" : "SHA1",
+      "checksumValue" : "919f0dfe192fb4e063e7dacadee7f8bb9a2672a9"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/annotations/13.0/annotations-13.0.jar",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.jetbrains/annotations@13.0?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "Apache-2.0",
+    "licenseInfoFromFiles" : [ ],
+    "name" : "org.jetbrains:annotations:13.0",
+    "supplier" : "Organization: JetBrains",
+    "versionInfo" : "13.0"
   } ],
   "relationships" : [ {
     "spdxElementId" : "SPDXRef-DOCUMENT",
@@ -684,7 +707,7 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd28"
+    "relatedSpdxElement" : "SPDXRef-gnrtd26"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
@@ -692,7 +715,7 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd18"
+    "relatedSpdxElement" : "SPDXRef-gnrtd28"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
@@ -700,7 +723,31 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd26"
+    "relatedSpdxElement" : "SPDXRef-gnrtd16"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd0",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd14"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd0",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd18"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd0",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd17"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd0",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd12"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd0",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd3"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd0",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd1"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd0",
     "relationshipType" : "DEPENDS_ON",
@@ -710,41 +757,17 @@
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd6"
   }, {
-    "spdxElementId" : "SPDXRef-gnrtd0",
-    "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd14"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd0",
-    "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd12"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd0",
-    "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd1"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd0",
-    "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd17"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd0",
-    "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd16"
-  }, {
     "spdxElementId" : "SPDXRef-gnrtd1",
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd2"
   }, {
-    "spdxElementId" : "SPDXRef-gnrtd1",
-    "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd5"
-  }, {
-    "spdxElementId" : "SPDXRef-gnrtd2",
-    "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd3"
-  }, {
     "spdxElementId" : "SPDXRef-gnrtd3",
     "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd4"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd3",
+    "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd5"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd6",
     "relationshipType" : "DEPENDS_ON",
@@ -772,11 +795,15 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd18",
     "relationshipType" : "DEPENDS_ON",
+    "relatedSpdxElement" : "SPDXRef-gnrtd21"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd18",
+    "relationshipType" : "DEPENDS_ON",
     "relatedSpdxElement" : "SPDXRef-gnrtd23"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd18",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd24"
+    "relatedSpdxElement" : "SPDXRef-gnrtd22"
   }, {
     "spdxElementId" : "SPDXRef-gnrtd18",
     "relationshipType" : "DEPENDS_ON",
@@ -788,10 +815,10 @@
   }, {
     "spdxElementId" : "SPDXRef-gnrtd18",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd22"
+    "relatedSpdxElement" : "SPDXRef-gnrtd24"
   }, {
-    "spdxElementId" : "SPDXRef-gnrtd18",
+    "spdxElementId" : "SPDXRef-gnrtd28",
     "relationshipType" : "DEPENDS_ON",
-    "relatedSpdxElement" : "SPDXRef-gnrtd21"
+    "relatedSpdxElement" : "SPDXRef-gnrtd29"
   } ]
 }
