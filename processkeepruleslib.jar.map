@@ -1,10 +1,10 @@
 # compiler: R8
-# compiler_version: 9.3.11-dev
+# compiler_version: 9.3.12-dev
 # compiler_hash: engineering
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: 9.3.11-dev
-# pg_map_hash: SHA-256 f34cd8bc2f76400cbd7b003378b3833fb562b7edc6c1d9604cde9a76ec641e57
+# pg_map_id: 9.3.12-dev
+# pg_map_hash: SHA-256 7a6e0a4ce21ef768bf6bc9519404ccf7c8ab464d612bae0172bf0ac6309764f0
 com.android.tools.r8.CompilationFailedException -> com.android.tools.r8.CompilationFailedException:
 # {"id":"sourceFile","fileName":"CompilationFailedException.java"}
     boolean cancelled -> a
@@ -6000,365 +6000,365 @@ com.android.tools.r8.processkeeprules.FilteredKeepRulesBuilder -> com.android.to
       # {"id":"com.android.tools.r8.residualsignature","signature":"Lcom/android/tools/r8/processkeeprules/internal/l9;"}
     boolean isInComment -> c
     boolean $assertionsDisabled -> d
-    1:1:void <clinit>():28:28 -> <clinit>
-    1:3:void <init>(com.android.tools.r8.StringConsumer,com.android.tools.r8.utils.Reporter):35:37 -> <init>
+    1:1:void <clinit>():26:26 -> <clinit>
+    1:3:void <init>(com.android.tools.r8.StringConsumer,com.android.tools.r8.utils.Reporter):33:35 -> <init>
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/StringConsumer;Lcom/android/tools/r8/processkeeprules/internal/l9;)V"}
     1:1:void addIgnoredOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0:0 -> a
     1:1:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addIgnoredOption(java.lang.String,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0 -> a
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
       # {"id":"com.android.tools.r8.outlineCallsite","positions":{"1":114,"4":115,"5":116},"outline":"Lcom/android/tools/r8/processkeeprules/internal/x1;a(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;Lcom/android/tools/r8/processkeeprules/internal/y1;Z)V"}
-    114:114:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75:75 -> a
-    114:114:void addIgnoredOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):157 -> a
-    115:115:void writeComment(java.lang.String):79:79 -> a
-    115:115:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> a
-    115:115:void addIgnoredOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):157 -> a
-    116:116:void writeComment(java.lang.String):80:80 -> a
-    116:116:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> a
-    116:116:void addIgnoredOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):157 -> a
-    2:5:void appendToCurrentLine(java.lang.String):41:44 -> a
-    6:7:void writeComment(java.lang.String):79:80 -> a
-    6:7:void disableObfuscation(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position):276 -> a
+    114:114:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73:73 -> a
+    114:114:void addIgnoredOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):155 -> a
+    115:115:void writeComment(java.lang.String):77:77 -> a
+    115:115:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> a
+    115:115:void addIgnoredOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):155 -> a
+    116:116:void writeComment(java.lang.String):78:78 -> a
+    116:116:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> a
+    116:116:void addIgnoredOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):155 -> a
+    2:5:void appendToCurrentLine(java.lang.String):39:42 -> a
+    6:7:void writeComment(java.lang.String):77:78 -> a
+    6:7:void disableObfuscation(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position):274 -> a
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;)V"}
-    8:8:void writeComment(java.lang.String):80:80 -> a
-    8:8:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> a
-    8:8:void enableFlattenPackageHierarchy(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):306 -> a
+    8:8:void writeComment(java.lang.String):78:78 -> a
+    8:8:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> a
+    8:8:void enableFlattenPackageHierarchy(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):304 -> a
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    9:15:void internalWrite(java.lang.String,boolean):84:90 -> a
-    16:16:void exitComment():63:63 -> a
-    16:16:void internalWrite(java.lang.String,boolean):92 -> a
-    17:21:void internalWrite(java.lang.String,boolean):94:98 -> a
+    9:15:void internalWrite(java.lang.String,boolean):82:88 -> a
+    16:16:void exitComment():61:61 -> a
+    16:16:void internalWrite(java.lang.String,boolean):90 -> a
+    17:21:void internalWrite(java.lang.String,boolean):92:96 -> a
     22:22:com.android.tools.r8.shaking.ProguardKeepAttributes com.android.tools.r8.shaking.ProguardKeepAttributes.fromPatterns(java.util.List,boolean):124:124 -> a
     22:22:com.android.tools.r8.shaking.ProguardKeepAttributes com.android.tools.r8.shaking.ProguardKeepAttributes.fromPatterns(java.util.List):119 -> a
-    22:22:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):193 -> a
+    22:22:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):191 -> a
     22:22:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addKeepAttributePatterns(java.util.ArrayList,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):0 -> a
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/util/ArrayList;Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
     23:66:void com.android.tools.r8.shaking.ProguardKeepAttributes.applyPatterns(java.util.List,boolean):131:174 -> a
     23:66:com.android.tools.r8.shaking.ProguardKeepAttributes com.android.tools.r8.shaking.ProguardKeepAttributes.fromPatterns(java.util.List,boolean):125 -> a
     23:66:com.android.tools.r8.shaking.ProguardKeepAttributes com.android.tools.r8.shaking.ProguardKeepAttributes.fromPatterns(java.util.List):119 -> a
-    23:66:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):193 -> a
+    23:66:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):191 -> a
     23:66:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addKeepAttributePatterns(java.util.ArrayList,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):0 -> a
-    67:83:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):194:210 -> a
+    67:83:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):192:208 -> a
     67:83:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addKeepAttributePatterns(java.util.ArrayList,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):0 -> a
     84:84:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> a
-    84:84:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> a
-    84:84:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):211 -> a
+    84:84:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> a
+    84:84:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):209 -> a
     84:84:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addKeepAttributePatterns(java.util.ArrayList,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):0 -> a
     85:85:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> a
     85:85:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> a
-    85:85:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> a
-    85:85:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):211 -> a
+    85:85:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> a
+    85:85:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):209 -> a
     85:85:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addKeepAttributePatterns(java.util.ArrayList,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):0 -> a
-    86:86:void write(java.lang.String):71:71 -> a
-    86:86:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> a
-    86:86:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):211 -> a
+    86:86:void write(java.lang.String):69:69 -> a
+    86:86:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> a
+    86:86:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):209 -> a
     86:86:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addKeepAttributePatterns(java.util.ArrayList,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):0 -> a
     87:87:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addKeepAttributePatterns(java.util.ArrayList,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):0:0 -> a
-    88:94:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):202:208 -> a
+    88:94:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):200:206 -> a
     88:94:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addKeepAttributePatterns(java.util.ArrayList,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):0 -> a
-    95:95:void write(java.lang.String):71:71 -> a
-    95:95:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):208 -> a
+    95:95:void write(java.lang.String):69:69 -> a
+    95:95:void addKeepAttributePatterns(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):206 -> a
     95:95:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addKeepAttributePatterns(java.util.ArrayList,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):0 -> a
-    96:96:void addLeadingBOM():175:175 -> a
-    97:97:void addParsedConfiguration(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser):251:251 -> a
+    96:96:void addLeadingBOM():173:173 -> a
+    97:97:void addParsedConfiguration(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser):249:249 -> a
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;)V"}
     98:98:java.util.Collection com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getPendingIncludes():370:370 -> a
-    98:98:void addParsedConfiguration(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser):251 -> a
+    98:98:void addParsedConfiguration(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser):249 -> a
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    99:99:void addParsedConfiguration(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser):251:251 -> a
-    100:105:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):259:264 -> a
+    99:99:void addParsedConfiguration(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser):249:249 -> a
+    100:105:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):257:262 -> a
     100:105:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addRule(com.android.tools.r8.processkeeprules.internal.ProguardConfigurationRule,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0 -> a
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/p7;Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     106:106:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> a
-    106:106:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> a
-    106:106:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):265 -> a
+    106:106:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> a
+    106:106:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):263 -> a
     106:106:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addRule(com.android.tools.r8.processkeeprules.internal.ProguardConfigurationRule,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0 -> a
     107:107:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> a
     107:107:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> a
-    107:107:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> a
-    107:107:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):265 -> a
+    107:107:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> a
+    107:107:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):263 -> a
     107:107:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addRule(com.android.tools.r8.processkeeprules.internal.ProguardConfigurationRule,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0 -> a
-    108:108:void write(java.lang.String):71:71 -> a
-    108:108:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> a
-    108:108:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):265 -> a
+    108:108:void write(java.lang.String):69:69 -> a
+    108:108:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> a
+    108:108:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):263 -> a
     108:108:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addRule(com.android.tools.r8.processkeeprules.internal.ProguardConfigurationRule,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0 -> a
     109:109:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0:0 -> a
     109:109:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addRule(com.android.tools.r8.processkeeprules.internal.ProguardConfigurationRule,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0 -> a
       # {"id":"com.android.tools.r8.outlineCallsite","positions":{"1":117,"4":118,"5":119},"outline":"Lcom/android/tools/r8/processkeeprules/internal/x1;a(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;Lcom/android/tools/r8/processkeeprules/internal/y1;Z)V"}
-    117:117:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75:75 -> a
-    117:117:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):262 -> a
-    118:118:void writeComment(java.lang.String):79:79 -> a
-    118:118:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> a
-    118:118:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):262 -> a
-    119:119:void writeComment(java.lang.String):80:80 -> a
-    119:119:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> a
-    119:119:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):262 -> a
-    110:110:void setIgnoreWarnings(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):389:389 -> a
+    117:117:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73:73 -> a
+    117:117:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):260 -> a
+    118:118:void writeComment(java.lang.String):77:77 -> a
+    118:118:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> a
+    118:118:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):260 -> a
+    119:119:void writeComment(java.lang.String):78:78 -> a
+    119:119:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> a
+    119:119:void addRule(com.android.tools.r8.shaking.ProguardConfigurationRule,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):260 -> a
+    110:110:void setIgnoreWarnings(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):387:387 -> a
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     111:111:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> a
-    111:111:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> a
-    111:111:void setIgnoreWarnings(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):390 -> a
+    111:111:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> a
+    111:111:void setIgnoreWarnings(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):388 -> a
     112:112:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> a
     112:112:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> a
-    112:112:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> a
-    112:112:void setIgnoreWarnings(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):390 -> a
-    113:113:void write(java.lang.String):71:71 -> a
-    113:113:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> a
-    113:113:void setIgnoreWarnings(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):390 -> a
+    112:112:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> a
+    112:112:void setIgnoreWarnings(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):388 -> a
+    113:113:void write(java.lang.String):69:69 -> a
+    113:113:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> a
+    113:113:void setIgnoreWarnings(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):388 -> a
     1:1:void addUnsupportedOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0:0 -> b
     1:1:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.addUnsupportedOption(java.lang.String,com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0 -> b
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
       # {"id":"com.android.tools.r8.outlineCallsite","positions":{"1":9,"4":10,"5":11},"outline":"Lcom/android/tools/r8/processkeeprules/internal/x1;a(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;Lcom/android/tools/r8/processkeeprules/internal/y1;Z)V"}
-    9:9:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75:75 -> b
-    9:9:void addUnsupportedOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):163 -> b
-    10:10:void writeComment(java.lang.String):79:79 -> b
-    10:10:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> b
-    10:10:void addUnsupportedOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):163 -> b
-    11:11:void writeComment(java.lang.String):80:80 -> b
-    11:11:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> b
-    11:11:void addUnsupportedOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):163 -> b
+    9:9:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73:73 -> b
+    9:9:void addUnsupportedOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):161 -> b
+    10:10:void writeComment(java.lang.String):77:77 -> b
+    10:10:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> b
+    10:10:void addUnsupportedOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):161 -> b
+    11:11:void writeComment(java.lang.String):78:78 -> b
+    11:11:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> b
+    11:11:void addUnsupportedOption(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):161 -> b
     2:2:void enableProtoShrinking(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0:0 -> b
     2:2:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.enableProtoShrinking(com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):0 -> b
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
       # {"id":"com.android.tools.r8.outlineCallsite","positions":{"1":12,"4":13,"5":14},"outline":"Lcom/android/tools/r8/processkeeprules/internal/x1;a(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;Lcom/android/tools/r8/processkeeprules/internal/y1;Z)V"}
-    12:12:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75:75 -> b
-    12:12:void enableProtoShrinking(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):357 -> b
-    13:13:void writeComment(java.lang.String):79:79 -> b
-    13:13:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> b
-    13:13:void enableProtoShrinking(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):357 -> b
-    14:14:void writeComment(java.lang.String):80:80 -> b
-    14:14:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> b
-    14:14:void enableProtoShrinking(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):357 -> b
-    3:5:void ensureComment():49:51 -> b
-    6:7:void writeComment(java.lang.String):79:80 -> b
-    6:7:void disableOptimization(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position):286 -> b
+    12:12:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73:73 -> b
+    12:12:void enableProtoShrinking(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):355 -> b
+    13:13:void writeComment(java.lang.String):77:77 -> b
+    13:13:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> b
+    13:13:void enableProtoShrinking(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):355 -> b
+    14:14:void writeComment(java.lang.String):78:78 -> b
+    14:14:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> b
+    14:14:void enableProtoShrinking(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):355 -> b
+    3:5:void ensureComment():47:49 -> b
+    6:7:void writeComment(java.lang.String):77:78 -> b
+    6:7:void disableOptimization(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position):284 -> b
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;)V"}
-    8:8:void writeComment(java.lang.String):80:80 -> b
-    8:8:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> b
-    8:8:void setRenameSourceFileAttribute(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):433 -> b
+    8:8:void writeComment(java.lang.String):78:78 -> b
+    8:8:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> b
+    8:8:void setRenameSourceFileAttribute(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):431 -> b
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    1:1:void ensureNewlineAfterComment():56:56 -> c
-    2:2:void exitComment():63:63 -> c
-    2:2:void ensureNewlineAfterComment():57 -> c
-    3:3:void ensureNewlineAfterComment():58:58 -> c
-    4:5:void writeComment(java.lang.String):79:80 -> c
-    4:5:void disableShrinking(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position):291 -> c
+    1:1:void ensureNewlineAfterComment():54:54 -> c
+    2:2:void exitComment():61:61 -> c
+    2:2:void ensureNewlineAfterComment():55 -> c
+    3:3:void ensureNewlineAfterComment():56:56 -> c
+    4:5:void writeComment(java.lang.String):77:78 -> c
+    4:5:void disableShrinking(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position):289 -> c
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;)V"}
-    6:6:void writeComment(java.lang.String):80:80 -> c
-    6:6:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> c
-    6:6:void setApplyMappingFile(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):383 -> c
+    6:6:void writeComment(java.lang.String):78:78 -> c
+    6:6:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> c
+    6:6:void setApplyMappingFile(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):381 -> c
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    7:7:void addAdaptResourceFileContents(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):116:116 -> c
+    7:7:void addAdaptResourceFileContents(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):114:114 -> c
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     8:8:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> c
-    8:8:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> c
-    8:8:void addAdaptResourceFileContents(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):117 -> c
+    8:8:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> c
+    8:8:void addAdaptResourceFileContents(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):115 -> c
     9:9:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> c
     9:9:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> c
-    9:9:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> c
-    9:9:void addAdaptResourceFileContents(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):117 -> c
-    10:10:void write(java.lang.String):71:71 -> c
-    10:10:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> c
-    10:10:void addAdaptResourceFileContents(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):117 -> c
-    1:2:void writeComment(java.lang.String):79:80 -> d
-    1:2:void disableRepackaging(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position):281 -> d
+    9:9:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> c
+    9:9:void addAdaptResourceFileContents(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):115 -> c
+    10:10:void write(java.lang.String):69:69 -> c
+    10:10:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> c
+    10:10:void addAdaptResourceFileContents(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):115 -> c
+    1:2:void writeComment(java.lang.String):77:78 -> d
+    1:2:void disableRepackaging(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position):279 -> d
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;)V"}
-    3:3:void writeComment(java.lang.String):80:80 -> d
-    3:3:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> d
-    3:3:void enableRepackageClasses(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):366 -> d
+    3:3:void writeComment(java.lang.String):78:78 -> d
+    3:3:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> d
+    3:3:void enableRepackageClasses(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):364 -> d
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    4:4:void setKeepParameterNames(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):405:405 -> d
+    4:4:void setKeepParameterNames(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):403:403 -> d
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     5:5:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> d
-    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> d
-    5:5:void setKeepParameterNames(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):406 -> d
+    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> d
+    5:5:void setKeepParameterNames(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):404 -> d
     6:6:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> d
     6:6:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> d
-    6:6:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> d
-    6:6:void setKeepParameterNames(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):406 -> d
-    7:7:void write(java.lang.String):71:71 -> d
-    7:7:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> d
-    7:7:void setKeepParameterNames(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):406 -> d
-    1:1:void writeComment(java.lang.String):80:80 -> e
-    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> e
-    1:1:void setPackageObfuscationDictionary(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):424 -> e
+    6:6:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> d
+    6:6:void setKeepParameterNames(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):404 -> d
+    7:7:void write(java.lang.String):69:69 -> d
+    7:7:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> d
+    7:7:void setKeepParameterNames(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):404 -> d
+    1:1:void writeComment(java.lang.String):78:78 -> e
+    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> e
+    1:1:void setPackageObfuscationDictionary(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):422 -> e
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    2:2:void addKeepKotlinMetadata(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):218:218 -> e
+    2:2:void addKeepKotlinMetadata(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):216:216 -> e
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> e
-    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> e
-    3:3:void addKeepKotlinMetadata(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):219 -> e
+    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> e
+    3:3:void addKeepKotlinMetadata(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):217 -> e
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> e
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> e
-    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> e
-    4:4:void addKeepKotlinMetadata(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):219 -> e
-    5:5:void write(java.lang.String):71:71 -> e
-    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> e
-    5:5:void addKeepKotlinMetadata(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):219 -> e
+    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> e
+    4:4:void addKeepKotlinMetadata(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):217 -> e
+    5:5:void write(java.lang.String):69:69 -> e
+    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> e
+    5:5:void addKeepKotlinMetadata(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):217 -> e
     1:1:void enableAllowAccessModification(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):0:0 -> f
     1:1:void com.android.tools.r8.processkeeprules.internal.FilteredKeepRulesBuilder.enableAllowAccessModification(com.android.tools.r8.processkeeprules.internal.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):0 -> f
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
       # {"id":"com.android.tools.r8.outlineCallsite","positions":{"1":5,"4":6,"5":7},"outline":"Lcom/android/tools/r8/processkeeprules/internal/x1;a(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;Lcom/android/tools/r8/processkeeprules/internal/y1;Z)V"}
-    5:5:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75:75 -> f
-    5:5:void enableAllowAccessModification(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):297 -> f
-    6:6:void writeComment(java.lang.String):79:79 -> f
-    6:6:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> f
-    6:6:void enableAllowAccessModification(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):297 -> f
-    7:7:void writeComment(java.lang.String):80:80 -> f
-    7:7:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> f
-    7:7:void enableAllowAccessModification(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):297 -> f
+    5:5:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73:73 -> f
+    5:5:void enableAllowAccessModification(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):295 -> f
+    6:6:void writeComment(java.lang.String):77:77 -> f
+    6:6:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> f
+    6:6:void enableAllowAccessModification(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):295 -> f
+    7:7:void writeComment(java.lang.String):78:78 -> f
+    7:7:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> f
+    7:7:void enableAllowAccessModification(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):295 -> f
     2:2:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> f
-    2:2:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> f
-    2:2:void addWhitespace(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):271 -> f
+    2:2:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> f
+    2:2:void addWhitespace(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):269 -> f
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> f
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> f
-    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> f
-    3:3:void addWhitespace(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):271 -> f
-    4:4:void write(java.lang.String):71:71 -> f
-    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> f
-    4:4:void addWhitespace(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):271 -> f
-    1:1:void writeComment(java.lang.String):80:80 -> g
-    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> g
-    1:1:void setObfuscationDictionary(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):415 -> g
+    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> f
+    3:3:void addWhitespace(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):269 -> f
+    4:4:void write(java.lang.String):69:69 -> f
+    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> f
+    4:4:void addWhitespace(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):269 -> f
+    1:1:void writeComment(java.lang.String):78:78 -> g
+    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> g
+    1:1:void setObfuscationDictionary(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):413 -> g
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    2:2:void addDontNotePattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):141:141 -> g
+    2:2:void addDontNotePattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):139:139 -> g
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> g
-    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> g
-    3:3:void addDontNotePattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):142 -> g
+    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> g
+    3:3:void addDontNotePattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):140 -> g
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> g
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> g
-    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> g
-    4:4:void addDontNotePattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):142 -> g
-    5:5:void write(java.lang.String):71:71 -> g
-    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> g
-    5:5:void addDontNotePattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):142 -> g
-    1:1:void writeComment(java.lang.String):80:80 -> h
-    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> h
-    1:1:void enablePrintSeeds(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):342 -> h
+    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> g
+    4:4:void addDontNotePattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):140 -> g
+    5:5:void write(java.lang.String):69:69 -> g
+    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> g
+    5:5:void addDontNotePattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):140 -> g
+    1:1:void writeComment(java.lang.String):78:78 -> h
+    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> h
+    1:1:void enablePrintSeeds(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):340 -> h
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    2:2:void addKeepPackageNamesPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):236:236 -> h
+    2:2:void addKeepPackageNamesPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):234:234 -> h
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> h
-    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> h
-    3:3:void addKeepPackageNamesPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):237 -> h
+    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> h
+    3:3:void addKeepPackageNamesPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):235 -> h
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> h
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> h
-    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> h
-    4:4:void addKeepPackageNamesPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):237 -> h
-    5:5:void write(java.lang.String):71:71 -> h
-    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> h
-    5:5:void addKeepPackageNamesPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):237 -> h
-    1:1:void writeComment(java.lang.String):80:80 -> i
-    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> i
-    1:1:void setClassObfuscationDictionary(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):399 -> i
+    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> h
+    4:4:void addKeepPackageNamesPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):235 -> h
+    5:5:void write(java.lang.String):69:69 -> h
+    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> h
+    5:5:void addKeepPackageNamesPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):235 -> h
+    1:1:void writeComment(java.lang.String):78:78 -> i
+    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> i
+    1:1:void setClassObfuscationDictionary(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):397 -> i
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    2:2:void addDontWarnPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):150:150 -> i
+    2:2:void addDontWarnPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):148:148 -> i
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> i
-    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> i
-    3:3:void addDontWarnPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):151 -> i
+    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> i
+    3:3:void addDontWarnPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):149 -> i
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> i
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> i
-    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> i
-    4:4:void addDontWarnPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):151 -> i
-    5:5:void write(java.lang.String):71:71 -> i
-    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> i
-    5:5:void addDontWarnPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):151 -> i
-    1:1:void writeComment(java.lang.String):80:80 -> j
-    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> j
-    1:1:void enablePrintConfiguration(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):324 -> j
+    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> i
+    4:4:void addDontWarnPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):149 -> i
+    5:5:void write(java.lang.String):69:69 -> i
+    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> i
+    5:5:void addDontWarnPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):149 -> i
+    1:1:void writeComment(java.lang.String):78:78 -> j
+    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> j
+    1:1:void enablePrintConfiguration(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):322 -> j
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    2:2:void addInclude(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):169:169 -> j
+    2:2:void addInclude(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):167:167 -> j
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> j
-    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> j
-    3:3:void addInclude(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):170 -> j
+    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> j
+    3:3:void addInclude(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):168 -> j
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> j
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> j
-    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> j
-    4:4:void addInclude(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):170 -> j
-    5:5:void write(java.lang.String):71:71 -> j
-    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> j
-    5:5:void addInclude(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):170 -> j
-    1:1:void writeComment(java.lang.String):80:80 -> k
-    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> k
-    1:1:void enablePrintUsage(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):351 -> k
+    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> j
+    4:4:void addInclude(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):168 -> j
+    5:5:void write(java.lang.String):69:69 -> j
+    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> j
+    5:5:void addInclude(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):168 -> j
+    1:1:void writeComment(java.lang.String):78:78 -> k
+    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> k
+    1:1:void enablePrintUsage(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):349 -> k
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    2:2:void writeComment(java.lang.String):80:80 -> k
-    2:2:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> k
-    2:2:void joinMaxRemovedAndroidLogLevel(int,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):374 -> k
+    2:2:void writeComment(java.lang.String):78:78 -> k
+    2:2:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> k
+    2:2:void joinMaxRemovedAndroidLogLevel(int,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):372 -> k
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
-    1:1:void writeComment(java.lang.String):80:80 -> l
-    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> l
-    1:1:void addLibraryJars(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):246 -> l
+    1:1:void writeComment(java.lang.String):78:78 -> l
+    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> l
+    1:1:void addLibraryJars(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):244 -> l
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    2:2:void addAdaptClassStringsPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):107:107 -> l
+    2:2:void addAdaptClassStringsPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):105:105 -> l
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> l
-    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> l
-    3:3:void addAdaptClassStringsPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):108 -> l
+    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> l
+    3:3:void addAdaptClassStringsPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):106 -> l
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> l
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> l
-    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> l
-    4:4:void addAdaptClassStringsPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):108 -> l
-    5:5:void write(java.lang.String):71:71 -> l
-    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> l
-    5:5:void addAdaptClassStringsPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):108 -> l
-    1:1:void writeComment(java.lang.String):80:80 -> m
-    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> m
-    1:1:void addProcessKotlinNullChecks(com.android.tools.r8.shaking.ProguardConfiguration$ProcessKotlinNullChecks,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):228 -> m
+    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> l
+    4:4:void addAdaptClassStringsPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):106 -> l
+    5:5:void write(java.lang.String):69:69 -> l
+    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> l
+    5:5:void addAdaptClassStringsPattern(com.android.tools.r8.shaking.ProguardClassNameList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):106 -> l
+    1:1:void writeComment(java.lang.String):78:78 -> m
+    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> m
+    1:1:void addProcessKotlinNullChecks(com.android.tools.r8.shaking.ProguardConfiguration$ProcessKotlinNullChecks,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):226 -> m
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
-    2:2:void writeComment(java.lang.String):80:80 -> m
-    2:2:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> m
-    2:2:void enablePrintMapping(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):333 -> m
+    2:2:void writeComment(java.lang.String):78:78 -> m
+    2:2:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> m
+    2:2:void enablePrintMapping(java.lang.String,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):331 -> m
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    1:1:void writeComment(java.lang.String):80:80 -> n
-    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):75 -> n
-    1:1:void addInjars(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):184 -> n
+    1:1:void writeComment(java.lang.String):78:78 -> n
+    1:1:void writeComment(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):73 -> n
+    1:1:void addInjars(java.util.List,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.Position,com.android.tools.r8.position.TextPosition):182 -> n
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/Position;Lcom/android/tools/r8/position/TextPosition;)V"}
-    2:2:void addAdaptResourceFilenames(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):125:125 -> n
+    2:2:void addAdaptResourceFilenames(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):123:123 -> n
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> n
-    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> n
-    3:3:void addAdaptResourceFilenames(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):126 -> n
+    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> n
+    3:3:void addAdaptResourceFilenames(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):124 -> n
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> n
     4:4:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> n
-    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> n
-    4:4:void addAdaptResourceFilenames(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):126 -> n
-    5:5:void write(java.lang.String):71:71 -> n
-    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> n
-    5:5:void addAdaptResourceFilenames(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):126 -> n
-    1:1:void addBaseDirectory(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):132:132 -> o
+    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> n
+    4:4:void addAdaptResourceFilenames(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):124 -> n
+    5:5:void write(java.lang.String):69:69 -> n
+    5:5:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> n
+    5:5:void addAdaptResourceFilenames(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):124 -> n
+    1:1:void addBaseDirectory(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):130:130 -> o
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     2:2:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> o
-    2:2:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> o
-    2:2:void addBaseDirectory(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):133 -> o
+    2:2:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> o
+    2:2:void addBaseDirectory(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):131 -> o
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> o
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> o
-    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> o
-    3:3:void addBaseDirectory(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):133 -> o
-    4:4:void write(java.lang.String):71:71 -> o
-    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> o
-    4:4:void addBaseDirectory(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):133 -> o
-    1:1:void enableKeepDirectories(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):314:314 -> p
+    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> o
+    3:3:void addBaseDirectory(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):131 -> o
+    4:4:void write(java.lang.String):69:69 -> o
+    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> o
+    4:4:void addBaseDirectory(java.nio.file.Path,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):131 -> o
+    1:1:void enableKeepDirectories(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):312:312 -> p
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/android/tools/r8/processkeeprules/internal/l7;Lcom/android/tools/r8/position/TextPosition;)V"}
     2:2:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362:362 -> p
-    2:2:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> p
-    2:2:void enableKeepDirectories(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):315 -> p
+    2:2:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> p
+    2:2:void enableKeepDirectories(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):313 -> p
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentInRange(int,int):358:358 -> p
     3:3:java.lang.String com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser.getContentSince(com.android.tools.r8.position.TextPosition):362 -> p
-    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> p
-    3:3:void enableKeepDirectories(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):315 -> p
-    4:4:void write(java.lang.String):71:71 -> p
-    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):67 -> p
-    4:4:void enableKeepDirectories(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):315 -> p
+    3:3:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> p
+    3:3:void enableKeepDirectories(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):313 -> p
+    4:4:void write(java.lang.String):69:69 -> p
+    4:4:void write(com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):65 -> p
+    4:4:void enableKeepDirectories(com.android.tools.r8.shaking.ProguardPathList,com.android.tools.r8.shaking.ProguardConfigurationParser$ProguardConfigurationSourceParser,com.android.tools.r8.position.TextPosition):313 -> p
 com.android.tools.r8.processkeeprules.FilteredKeepRulesBuilder$0 -> com.android.tools.r8.processkeeprules.internal.x1:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
