@@ -2,7 +2,7 @@
   "SPDXID" : "SPDXRef-DOCUMENT",
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
-    "created" : "2026-06-30T14:14:18Z",
+    "created" : "2026-07-07T09:09:16Z",
     "creators" : [ "Tool: spdx-gradle-plugin", "Organization: Google LLC" ]
   },
   "name" : "R8 Compiler Suite",
@@ -18,7 +18,7 @@
     "name" : "Apache License, Version 2.0",
     "seeAlsos" : [ "http://www.apache.org/licenses/LICENSE-2.0.html" ]
   } ],
-  "documentNamespace" : "https://spdx.google/1eda6fb4-009e-5b9b-83e5-c67c6e506ec4",
+  "documentNamespace" : "https://spdx.google/d922ae87-332e-51da-ae1c-28bedf20b6f9",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "copyrightText" : "NOASSERTION",
@@ -29,9 +29,9 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "dist",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@43f8e25a9731079a68766d60b8efa08066456a94#dist[:dist]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@d6b163d5f59dcef141f834f15a30dcac537127e0#dist[:dist]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.4.6-dev"
+    "versionInfo" : "9.4.8-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
@@ -381,25 +381,25 @@
     "SPDXID" : "SPDXRef-gnrtd16",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "9094ae67d01d0ad246f886f11ad557fc2e79c72cbf3feed83e1512a8ae90a74a"
+      "checksumValue" : "b5543ee08d062d551cf0a5c9bc0fb70588b0382079029ba48941fa9c9be8a5d4"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "a6cff377eecc19c2037bf31568a6d7106b50ba1f"
+      "checksumValue" : "c24946d46824bd528054bface3231d2ecb7e95e8"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/it/unimi/dsi/fastutil/8.5.18/fastutil-8.5.18.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/it/unimi/dsi/fastutil/8.5.12/fastutil-8.5.12.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/it.unimi.dsi/fastutil@8.5.18?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/it.unimi.dsi/fastutil@8.5.12?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "LicenseRef-gnrtd1",
     "licenseInfoFromFiles" : [ ],
-    "name" : "it.unimi.dsi:fastutil:8.5.18",
+    "name" : "it.unimi.dsi:fastutil:8.5.12",
     "supplier" : "Person: Sebastiano Vigna (sebastiano.vigna@unimi.it)",
-    "versionInfo" : "8.5.18"
+    "versionInfo" : "8.5.12"
   }, {
     "SPDXID" : "SPDXRef-gnrtd17",
     "checksums" : [ {
