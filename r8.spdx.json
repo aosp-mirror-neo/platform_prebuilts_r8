@@ -2,7 +2,7 @@
   "SPDXID" : "SPDXRef-DOCUMENT",
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
-    "created" : "2026-07-07T09:09:16Z",
+    "created" : "2026-07-29T11:11:29Z",
     "creators" : [ "Tool: spdx-gradle-plugin", "Organization: Google LLC" ]
   },
   "name" : "R8 Compiler Suite",
@@ -18,7 +18,7 @@
     "name" : "Apache License, Version 2.0",
     "seeAlsos" : [ "http://www.apache.org/licenses/LICENSE-2.0.html" ]
   } ],
-  "documentNamespace" : "https://spdx.google/d922ae87-332e-51da-ae1c-28bedf20b6f9",
+  "documentNamespace" : "https://spdx.google/2d89ca62-e775-5f26-9535-e46b9bbdb2a0",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "copyrightText" : "NOASSERTION",
@@ -29,32 +29,32 @@
     "licenseDeclared" : "NOASSERTION",
     "licenseInfoFromFiles" : [ ],
     "name" : "dist",
-    "sourceInfo" : "git+https://r8.googlesource.com/r8/@d6b163d5f59dcef141f834f15a30dcac537127e0#dist[:dist]",
+    "sourceInfo" : "git+https://r8.googlesource.com/r8/@fb30f2afb277699eb40258e479aa80f9f61e357f#dist[:dist]",
     "supplier" : "Organization: Google LLC",
-    "versionInfo" : "9.4.8-dev"
+    "versionInfo" : "9.4.10-dev"
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "f61662c6d3a2f8ef5bd34362a02d877772c39f393cd394feb259dfaf7f4d8437"
+      "checksumValue" : "ccb14ff83fabcb11458b798dbc9824748ccdffeec79c9aba789e6ed1cda86b1c"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "8b80e2f80a3b7daa99c16017f91d4c72cd8b31a6"
+      "checksumValue" : "4e9f4b531dce5c7dee58ed2de9a8b9a763c8dc6c"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.3.10/kotlin-stdlib-2.3.10.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.4.0/kotlin-stdlib-2.4.0.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.3.10?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.4.0?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "org.jetbrains.kotlin:kotlin-stdlib:2.3.10",
+    "name" : "org.jetbrains.kotlin:kotlin-stdlib:2.4.0",
     "supplier" : "Organization: JetBrains",
-    "versionInfo" : "2.3.10"
+    "versionInfo" : "2.4.0"
   }, {
     "SPDXID" : "SPDXRef-gnrtd2",
     "checksums" : [ {
@@ -588,25 +588,25 @@
     "SPDXID" : "SPDXRef-gnrtd25",
     "checksums" : [ {
       "algorithm" : "SHA256",
-      "checksumValue" : "c1df5bc6530b4c744b13788dbf8540a469898fdfbcde6abca9119184f5d3707c"
+      "checksumValue" : "9aadc51c588e76c8cf3d83d4090e46a4b687f2edaa1fdf65aa9fe44223294927"
     }, {
       "algorithm" : "SHA1",
-      "checksumValue" : "bd7dd343c85447594fe1b2f3b3443c9f75c2ba23"
+      "checksumValue" : "fb711e3e9441b4c46f28262439373273727b142f"
     } ],
     "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-metadata-jvm/2.3.10/kotlin-metadata-jvm-2.3.10.jar",
+    "downloadLocation" : "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-metadata-jvm/2.4.0/kotlin-metadata-jvm-2.4.0.jar",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-metadata-jvm@2.3.10?repository_url=repo1.maven.org%2Fmaven2",
+      "referenceLocator" : "pkg:maven/org.jetbrains.kotlin/kotlin-metadata-jvm@2.4.0?repository_url=repo1.maven.org%2Fmaven2",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "Apache-2.0",
     "licenseInfoFromFiles" : [ ],
-    "name" : "org.jetbrains.kotlin:kotlin-metadata-jvm:2.3.10",
+    "name" : "org.jetbrains.kotlin:kotlin-metadata-jvm:2.4.0",
     "supplier" : "Organization: JetBrains",
-    "versionInfo" : "2.3.10"
+    "versionInfo" : "2.4.0"
   }, {
     "SPDXID" : "SPDXRef-gnrtd26",
     "checksums" : [ {
