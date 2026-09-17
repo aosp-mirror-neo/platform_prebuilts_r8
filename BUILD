@@ -55,6 +55,8 @@ jvm_import(
         "//tools/base/deploy/deployer:__pkg__",
         "//tools/base/deploy/test:__pkg__",
         "//tools/base/sdklib:__pkg__",
+        "//tools/vendor/google/appanalyzer:__subpackages__",
+        "//tools/vendor/google/keepgator:__subpackages__",
     ],
 )
 
