@@ -1,7 +1,7 @@
+load("@build_conf//rules/gathering:prebuilt_package_metadata.bzl", "prebuilt_package_metadata")
 load("@rules_java//java:defs.bzl", "java_binary")
 load("@rules_license//rules:license.bzl", "license")
 load("@rules_license//rules:package_info.bzl", "package_info")
-load("//build/bazel/rules/gathering:prebuilt_package_metadata.bzl", "prebuilt_package_metadata")
 load("//tools/base/bazel:jvm_import.bzl", "jvm_import")
 load("//tools/base/bazel:utils.bzl", "fileset")
 
